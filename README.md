@@ -16,6 +16,9 @@
   <img src="https://github-immortality.vercel.app/api?username=Daily-AC">
 </div>
 
+<div align="center">
+  <img src="/github-metrics.svg">
+</div>
 
 <!-- 贪吃蛇 -->
 <picture>
