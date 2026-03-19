@@ -105,9 +105,9 @@
 ### 🐍 修 行 轨 迹
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/profile-snake-contrib/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/profile-snake-contrib/github-contribution-grid-snake.svg" />
-  <img alt="contribution snake animation" src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/profile-snake-contrib/github-contribution-grid-snake-dark.svg" width="100%" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Daily-AC/Daily-AC/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Daily-AC/Daily-AC/output/github-snake.svg" />
+  <img alt="contribution snake animation" src="https://raw.githubusercontent.com/Daily-AC/Daily-AC/output/github-snake-dark.svg" width="100%" />
 </picture>
 
 <br/><br/>
