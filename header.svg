@@ -1,29 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="850" height="300" viewBox="0 0 850 300">
   <defs>
     <clipPath id="banner-clip"><rect width="850" height="300"/></clipPath>
-    <!-- Neon glow filters -->
-    <filter id="glow-pink" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="6" result="b"/>
-      <feFlood flood-color="#ff2d95" flood-opacity="0.8" result="c"/>
-      <feComposite in="c" in2="b" operator="in" result="d"/>
-      <feMerge><feMergeNode in="d"/><feMergeNode in="d"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="glow-cyan" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="4" result="b"/>
-      <feFlood flood-color="#00f0ff" flood-opacity="0.7" result="c"/>
-      <feComposite in="c" in2="b" operator="in" result="d"/>
-      <feMerge><feMergeNode in="d"/><feMergeNode in="d"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="glow-green" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3" result="b"/>
-      <feFlood flood-color="#39ff14" flood-opacity="0.6" result="c"/>
-      <feComposite in="c" in2="b" operator="in" result="d"/>
-      <feMerge><feMergeNode in="d"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="glow-soft" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="12" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
     <!-- Scanline pattern -->
     <pattern id="scanlines" width="850" height="4" patternUnits="userSpaceOnUse">
       <rect width="850" height="2" fill="rgba(0,0,0,0.3)"/>
@@ -118,11 +95,9 @@
       0% { transform: translateY(-300px); }
       100% { transform: translateY(300px); }
     }
-    .scanline-sweep {
-      animation: scanline-move 6s linear infinite;
-    }
+    .scanline-sweep { animation: scanline-move 6s linear infinite; }
 
-    /* Code rain animations - different speeds */
+    /* Code rain animations */
     @keyframes rain1 { 0% { transform: translateY(-30px); opacity: 0; } 10% { opacity: 0.9; } 90% { opacity: 0.9; } 100% { transform: translateY(310px); opacity: 0; } }
     @keyframes rain2 { 0% { transform: translateY(-50px); opacity: 0; } 15% { opacity: 0.7; } 85% { opacity: 0.7; } 100% { transform: translateY(320px); opacity: 0; } }
     @keyframes rain3 { 0% { transform: translateY(-20px); opacity: 0; } 10% { opacity: 0.5; } 80% { opacity: 0.5; } 100% { transform: translateY(300px); opacity: 0; } }
@@ -178,14 +153,12 @@
 
     <!-- Perspective grid ground (vaporwave style) -->
     <g opacity="0.4">
-      <!-- Horizontal lines receding -->
       <line x1="0" y1="300" x2="850" y2="300" stroke="#00f0ff" stroke-width="1.5" opacity="0.6"/>
       <line x1="100" y1="285" x2="750" y2="285" stroke="#00f0ff" stroke-width="1" opacity="0.4"/>
       <line x1="180" y1="272" x2="670" y2="272" stroke="#00f0ff" stroke-width="0.8" opacity="0.3"/>
       <line x1="240" y1="262" x2="610" y2="262" stroke="#00f0ff" stroke-width="0.6" opacity="0.25"/>
       <line x1="290" y1="254" x2="560" y2="254" stroke="#00f0ff" stroke-width="0.5" opacity="0.2"/>
       <line x1="320" y1="248" x2="530" y2="248" stroke="#00f0ff" stroke-width="0.4" opacity="0.15"/>
-      <!-- Vertical lines converging to vanishing point (425, 220) -->
       <line x1="0" y1="300" x2="425" y2="230" stroke="#00f0ff" stroke-width="0.5" opacity="0.2"/>
       <line x1="85" y1="300" x2="425" y2="230" stroke="#00f0ff" stroke-width="0.5" opacity="0.2"/>
       <line x1="170" y1="300" x2="425" y2="230" stroke="#00f0ff" stroke-width="0.5" opacity="0.22"/>
@@ -201,45 +174,36 @@
 
     <!-- Digital rain / matrix code columns -->
     <g font-family="monospace" font-size="11" fill="#39ff14">
-      <!-- Column 1 -->
       <text x="30" y="0" class="rain-1" opacity="0">0xF</text>
       <text x="30" y="30" class="rain-1" opacity="0" style="animation-delay:-1.2s">int</text>
       <text x="30" y="60" class="rain-1" opacity="0" style="animation-delay:-2.5s">A=1</text>
       <text x="30" y="90" class="rain-1" opacity="0" style="animation-delay:-3.8s">}{</text>
-      <!-- Column 2 -->
       <text x="80" y="0" class="rain-2" opacity="0">&amp;&amp;</text>
       <text x="80" y="35" class="rain-2" opacity="0" style="animation-delay:-0.8s">for</text>
       <text x="80" y="70" class="rain-2" opacity="0" style="animation-delay:-2s">++i</text>
       <text x="80" y="105" class="rain-2" opacity="0" style="animation-delay:-3.3s">;</text>
-      <!-- Column 3 -->
       <text x="130" y="0" class="rain-3" opacity="0">def</text>
       <text x="130" y="28" class="rain-3" opacity="0" style="animation-delay:-1s">=()</text>
       <text x="130" y="56" class="rain-3" opacity="0" style="animation-delay:-2.2s">ret</text>
       <text x="130" y="84" class="rain-3" opacity="0" style="animation-delay:-3s">nil</text>
-      <!-- Column 4 -->
       <text x="175" y="0" class="rain-4" opacity="0">sys</text>
       <text x="175" y="32" class="rain-4" opacity="0" style="animation-delay:-1.5s">run</text>
       <text x="175" y="64" class="rain-4" opacity="0" style="animation-delay:-2.8s">0x1</text>
-      <!-- Column 5 -->
       <text x="680" y="0" class="rain-5" opacity="0">new</text>
       <text x="680" y="30" class="rain-5" opacity="0" style="animation-delay:-0.6s">fn(</text>
       <text x="680" y="60" class="rain-5" opacity="0" style="animation-delay:-1.8s">|&gt;</text>
       <text x="680" y="90" class="rain-5" opacity="0" style="animation-delay:-3.2s">end</text>
-      <!-- Column 6 -->
       <text x="720" y="0" class="rain-6" opacity="0">::</text>
       <text x="720" y="34" class="rain-6" opacity="0" style="animation-delay:-1.1s">pub</text>
       <text x="720" y="68" class="rain-6" opacity="0" style="animation-delay:-2.4s">mut</text>
       <text x="720" y="102" class="rain-6" opacity="0" style="animation-delay:-3.6s">ref</text>
-      <!-- Column 7 -->
       <text x="760" y="0" class="rain-7" opacity="0">ACK</text>
       <text x="760" y="30" class="rain-7" opacity="0" style="animation-delay:-0.9s">TCP</text>
       <text x="760" y="60" class="rain-7" opacity="0" style="animation-delay:-2.1s">SYN</text>
-      <!-- Column 8 -->
       <text x="805" y="0" class="rain-8" opacity="0">010</text>
       <text x="805" y="28" class="rain-8" opacity="0" style="animation-delay:-0.5s">101</text>
       <text x="805" y="56" class="rain-8" opacity="0" style="animation-delay:-1.7s">110</text>
       <text x="805" y="84" class="rain-8" opacity="0" style="animation-delay:-2.9s">001</text>
-      <!-- Extra side columns for density -->
       <text x="10" y="0" class="rain-9" opacity="0" fill="#00f0ff" font-size="9">DP</text>
       <text x="10" y="25" class="rain-9" opacity="0" style="animation-delay:-1.4s" fill="#00f0ff" font-size="9">AC</text>
       <text x="10" y="50" class="rain-9" opacity="0" style="animation-delay:-3s" fill="#00f0ff" font-size="9">++</text>
@@ -253,7 +217,6 @@
 
     <!-- City skyline silhouette -->
     <g fill="#0a0a0f">
-      <!-- Far buildings (darker, subtler) -->
       <rect x="0" y="200" width="45" height="100" fill="#0e0e18"/>
       <rect x="42" y="185" width="35" height="115" fill="#0d0d15"/>
       <rect x="75" y="195" width="50" height="105" fill="#0e0e18"/>
@@ -282,7 +245,6 @@
 
     <!-- Building windows (flickering) -->
     <g>
-      <!-- Left cluster windows -->
       <rect x="50" y="192" width="3" height="3" fill="#ffcc00" class="wf1"/>
       <rect x="56" y="192" width="3" height="3" fill="#00f0ff" class="wf2"/>
       <rect x="50" y="198" width="3" height="3" fill="#ff2d95" class="wf3"/>
@@ -315,7 +277,6 @@
       <rect x="208" y="188" width="3" height="3" fill="#39ff14" class="wf4"/>
       <rect x="214" y="194" width="3" height="3" fill="#ff2d95" class="wf6"/>
 
-      <!-- Right cluster windows -->
       <rect x="578" y="186" width="3" height="3" fill="#ffcc00" class="wf3"/>
       <rect x="584" y="186" width="3" height="3" fill="#00f0ff" class="wf5"/>
       <rect x="578" y="192" width="3" height="3" fill="#ff2d95" class="wf1"/>
@@ -349,12 +310,19 @@
       <rect x="790" y="192" width="3" height="3" fill="#ff2d95" class="wf1"/>
     </g>
 
-    <!-- Neon horizon line -->
-    <line x1="0" y1="248" x2="850" y2="248" stroke="#ff2d95" stroke-width="1.5" opacity="0.5" class="horizon-line" filter="url(#glow-pink)"/>
+    <!-- Neon horizon line - multi-layer glow simulation -->
+    <line x1="0" y1="248" x2="850" y2="248" stroke="#ff2d95" stroke-width="6" opacity="0.1" class="horizon-line"/>
+    <line x1="0" y1="248" x2="850" y2="248" stroke="#ff2d95" stroke-width="3" opacity="0.25" class="horizon-line"/>
+    <line x1="0" y1="248" x2="850" y2="248" stroke="#ff2d95" stroke-width="1.5" opacity="0.7" class="horizon-line"/>
 
-    <!-- Decorative neon accents on buildings -->
-    <line x1="150" y1="190" x2="205" y2="190" stroke="#ff2d95" stroke-width="1" opacity="0.6" class="neon-flicker" filter="url(#glow-pink)"/>
-    <line x1="608" y1="190" x2="658" y2="190" stroke="#00f0ff" stroke-width="1" opacity="0.6" class="neon-flicker-alt" filter="url(#glow-cyan)"/>
+    <!-- Decorative neon accents on buildings - multi-layer -->
+    <line x1="150" y1="190" x2="205" y2="190" stroke="#ff2d95" stroke-width="4" opacity="0.12" class="neon-flicker"/>
+    <line x1="150" y1="190" x2="205" y2="190" stroke="#ff2d95" stroke-width="2" opacity="0.5" class="neon-flicker"/>
+    <line x1="150" y1="190" x2="205" y2="190" stroke="#ff6dba" stroke-width="1" opacity="0.8" class="neon-flicker"/>
+
+    <line x1="608" y1="190" x2="658" y2="190" stroke="#00f0ff" stroke-width="4" opacity="0.12" class="neon-flicker-alt"/>
+    <line x1="608" y1="190" x2="658" y2="190" stroke="#00f0ff" stroke-width="2" opacity="0.5" class="neon-flicker-alt"/>
+    <line x1="608" y1="190" x2="658" y2="190" stroke="#80f8ff" stroke-width="1" opacity="0.8" class="neon-flicker-alt"/>
 
     <!-- ===== MAIN TITLE: "Daily-AC" with glitch effect ===== -->
     <g transform="translate(425, 115)" text-anchor="middle">
@@ -364,21 +332,42 @@
       <!-- Glitch layer: blue channel offset -->
       <text class="title-b" font-family="'Courier New', monospace" font-size="72" font-weight="bold"
             fill="#00f0ff" opacity="0" x="0" y="0">Daily-AC</text>
+      <!-- Glow layers for main title (simulated filter) -->
+      <text class="title-main" font-family="'Courier New', monospace" font-size="72" font-weight="bold"
+            fill="#00f0ff" opacity="0.15" x="0" y="2">Daily-AC</text>
+      <text class="title-main" font-family="'Courier New', monospace" font-size="72" font-weight="bold"
+            fill="#00f0ff" opacity="0.15" x="0" y="-2">Daily-AC</text>
+      <text class="title-main" font-family="'Courier New', monospace" font-size="72" font-weight="bold"
+            fill="#00f0ff" opacity="0.1" x="2" y="0">Daily-AC</text>
+      <text class="title-main" font-family="'Courier New', monospace" font-size="72" font-weight="bold"
+            fill="#00f0ff" opacity="0.1" x="-2" y="0">Daily-AC</text>
       <!-- Main title -->
       <text class="title-main" font-family="'Courier New', monospace" font-size="72" font-weight="bold"
-            fill="#ffffff" filter="url(#glow-soft)" x="0" y="0">Daily-AC</text>
+            fill="#ffffff" x="0" y="0">Daily-AC</text>
     </g>
 
-    <!-- Neon underline decoration -->
+    <!-- Neon underline decoration - multi-layer glow -->
     <g class="neon-flicker">
-      <line x1="260" y1="132" x2="385" y2="132" stroke="#ff2d95" stroke-width="2" filter="url(#glow-pink)"/>
-      <line x1="465" y1="132" x2="590" y2="132" stroke="#00f0ff" stroke-width="2" filter="url(#glow-cyan)"/>
-      <rect x="385" y="130" width="80" height="4" fill="#39ff14" opacity="0.8" filter="url(#glow-green)"/>
+      <!-- Pink line glow layers -->
+      <line x1="260" y1="132" x2="385" y2="132" stroke="#ff2d95" stroke-width="5" opacity="0.12"/>
+      <line x1="260" y1="132" x2="385" y2="132" stroke="#ff2d95" stroke-width="2.5" opacity="0.5"/>
+      <line x1="260" y1="132" x2="385" y2="132" stroke="#ff6dba" stroke-width="1.5" opacity="0.9"/>
+      <!-- Cyan line glow layers -->
+      <line x1="465" y1="132" x2="590" y2="132" stroke="#00f0ff" stroke-width="5" opacity="0.12"/>
+      <line x1="465" y1="132" x2="590" y2="132" stroke="#00f0ff" stroke-width="2.5" opacity="0.5"/>
+      <line x1="465" y1="132" x2="590" y2="132" stroke="#80f8ff" stroke-width="1.5" opacity="0.9"/>
+      <!-- Green center glow layers -->
+      <rect x="384" y="129" width="82" height="6" fill="#39ff14" opacity="0.08" rx="3"/>
+      <rect x="385" y="130" width="80" height="4" fill="#39ff14" opacity="0.5"/>
+      <rect x="386" y="131" width="78" height="2" fill="#90ff80" opacity="0.9"/>
     </g>
 
-    <!-- Subtitle -->
+    <!-- Subtitle with glow simulation -->
     <g transform="translate(425, 160)" text-anchor="middle">
-      <text font-family="'Courier New', monospace" font-size="14" fill="#00f0ff" letter-spacing="4" opacity="0.9" filter="url(#glow-cyan)">
+      <text font-family="'Courier New', monospace" font-size="14" fill="#00f0ff" letter-spacing="4" opacity="0.2" x="1" y="1">
+        SYSTEM ONLINE // CODE.COMPILE.CONQUER
+      </text>
+      <text font-family="'Courier New', monospace" font-size="14" fill="#00f0ff" letter-spacing="4" opacity="0.9">
         SYSTEM ONLINE // CODE.COMPILE.CONQUER
       </text>
       <!-- Blinking cursor -->
@@ -395,16 +384,12 @@
 
     <!-- Corner decorations (cyber frame) -->
     <g stroke="#ff2d95" stroke-width="1.5" opacity="0.5" class="neon-flicker">
-      <!-- Top-left corner -->
       <line x1="5" y1="5" x2="40" y2="5"/>
       <line x1="5" y1="5" x2="5" y2="40"/>
-      <!-- Top-right corner -->
       <line x1="810" y1="5" x2="845" y2="5"/>
       <line x1="845" y1="5" x2="845" y2="40"/>
-      <!-- Bottom-left corner -->
       <line x1="5" y1="260" x2="5" y2="295"/>
       <line x1="5" y1="295" x2="40" y2="295"/>
-      <!-- Bottom-right corner -->
       <line x1="845" y1="260" x2="845" y2="295"/>
       <line x1="810" y1="295" x2="845" y2="295"/>
     </g>

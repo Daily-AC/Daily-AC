@@ -1,25 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="850" height="120" viewBox="0 0 850 120">
   <defs>
-    <!-- Neon glow filters -->
-    <filter id="glowPink" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feFlood flood-color="#ff2d95" flood-opacity="0.8" result="color"/>
-      <feComposite in="color" in2="blur" operator="in" result="shadow"/>
-      <feMerge><feMergeNode in="shadow"/><feMergeNode in="shadow"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="2.5" result="blur"/>
-      <feFlood flood-color="#00f0ff" flood-opacity="0.7" result="color"/>
-      <feComposite in="color" in2="blur" operator="in" result="shadow"/>
-      <feMerge><feMergeNode in="shadow"/><feMergeNode in="shadow"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="glowGreen" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="2" result="blur"/>
-      <feFlood flood-color="#39ff14" flood-opacity="0.6" result="color"/>
-      <feComposite in="color" in2="blur" operator="in" result="shadow"/>
-      <feMerge><feMergeNode in="shadow"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-
     <!-- Neon gradient line -->
     <linearGradient id="neonLine" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#ff2d95" stop-opacity="0"/>
@@ -29,10 +9,6 @@
       <stop offset="85%" stop-color="#00f0ff"/>
       <stop offset="100%" stop-color="#ff2d95" stop-opacity="0"/>
     </linearGradient>
-    <filter id="lineGlow" x="-5%" y="-300%" width="110%" height="700%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
 
     <!-- Scanline pattern -->
     <pattern id="scanlines" patternUnits="userSpaceOnUse" width="850" height="4">
@@ -44,6 +20,16 @@
     <clipPath id="cityClip">
       <rect width="850" height="120"/>
     </clipPath>
+
+    <!-- Vignette gradients -->
+    <linearGradient id="vigL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0a0a0f"/>
+      <stop offset="100%" stop-color="#0a0a0f" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="vigR" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0a0a0f" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </linearGradient>
   </defs>
 
   <style>
@@ -82,33 +68,15 @@
       0%, 100% { opacity: 0.3; }
       50% { opacity: 0.8; }
     }
-    .scan-beam {
-      animation: scanMove 4s linear infinite;
-    }
-    .neon-flicker-1 {
-      animation: flicker1 3s infinite;
-    }
-    .neon-flicker-2 {
-      animation: flicker2 4s infinite;
-    }
-    .pulse-anim {
-      animation: pulse 2s ease-in-out infinite;
-    }
-    .glitch-bar {
-      animation: glitchBar 5s infinite;
-    }
-    .signal-pulse {
-      animation: signalPulse 6s linear infinite;
-    }
-    .cursor-blink {
-      animation: blink 1s step-end infinite;
-    }
-    .data-stream {
-      animation: dataStream 3s ease-in-out infinite;
-    }
-    .mono {
-      font-family: 'Courier New', Courier, monospace;
-    }
+    .scan-beam { animation: scanMove 4s linear infinite; }
+    .neon-flicker-1 { animation: flicker1 3s infinite; }
+    .neon-flicker-2 { animation: flicker2 4s infinite; }
+    .pulse-anim { animation: pulse 2s ease-in-out infinite; }
+    .glitch-bar { animation: glitchBar 5s infinite; }
+    .signal-pulse { animation: signalPulse 6s linear infinite; }
+    .cursor-blink { animation: blink 1s step-end infinite; }
+    .data-stream { animation: dataStream 3s ease-in-out infinite; }
+    .mono { font-family: 'Courier New', Courier, monospace; }
   </style>
 
   <!-- Background -->
@@ -146,8 +114,10 @@
     <rect x="722" y="62" width="2" height="2" fill="#ff2d95" opacity="0.3"/>
   </g>
 
-  <!-- Neon divider line at top -->
-  <rect x="30" y="8" width="790" height="2" fill="url(#neonLine)" filter="url(#lineGlow)" class="neon-flicker-1"/>
+  <!-- Neon divider line at top - multi-layer glow simulation -->
+  <rect x="29" y="7" width="792" height="4" fill="url(#neonLine)" opacity="0.1" rx="2" class="neon-flicker-1"/>
+  <rect x="30" y="8" width="790" height="2" fill="url(#neonLine)" opacity="0.6" class="neon-flicker-1"/>
+  <rect x="31" y="8.5" width="788" height="1" fill="white" opacity="0.2" class="neon-flicker-1"/>
 
   <!-- Corner decorations -->
   <g stroke="#ff2d95" stroke-width="1.5" opacity="0.7" class="neon-flicker-2">
@@ -164,8 +134,14 @@
   <!-- Signal pulse sweep -->
   <rect class="signal-pulse" x="0" y="0" width="80" height="120" fill="url(#neonLine)" opacity="0.04"/>
 
-  <!-- Main title text -->
-  <text x="425" y="42" text-anchor="middle" class="mono neon-flicker-1" fill="#ff2d95" font-size="16" font-weight="bold" filter="url(#glowPink)" letter-spacing="3">
+  <!-- Main title text - multi-layer glow simulation -->
+  <text x="425" y="43" text-anchor="middle" class="mono" fill="#ff2d95" font-size="16" font-weight="bold" letter-spacing="3" opacity="0.2">
+    &#x300C; HACK THE PLANET // DEBUG THE MATRIX &#x300D;
+  </text>
+  <text x="425" y="41" text-anchor="middle" class="mono" fill="#ff2d95" font-size="16" font-weight="bold" letter-spacing="3" opacity="0.2">
+    &#x300C; HACK THE PLANET // DEBUG THE MATRIX &#x300D;
+  </text>
+  <text x="425" y="42" text-anchor="middle" class="mono neon-flicker-1" fill="#ff2d95" font-size="16" font-weight="bold" letter-spacing="3">
     &#x300C; HACK THE PLANET // DEBUG THE MATRIX &#x300D;
   </text>
 
@@ -176,8 +152,14 @@
   <!-- Neon divider line middle -->
   <line x1="120" y1="54" x2="730" y2="54" stroke="#00f0ff" stroke-width="0.5" opacity="0.3" stroke-dasharray="3,6"/>
 
-  <!-- Status line -->
-  <text x="425" y="72" text-anchor="middle" class="mono pulse-anim" fill="#39ff14" font-size="10.5" filter="url(#glowGreen)" letter-spacing="1.5">
+  <!-- Status line - multi-layer glow simulation -->
+  <text x="425" y="73" text-anchor="middle" class="mono" fill="#39ff14" font-size="10.5" letter-spacing="1.5" opacity="0.2">
+    CONNECTION_STATUS: ONLINE | UPTIME: &#x221E; | BUGS_SQUASHED: 999+
+  </text>
+  <text x="425" y="71" text-anchor="middle" class="mono" fill="#39ff14" font-size="10.5" letter-spacing="1.5" opacity="0.2">
+    CONNECTION_STATUS: ONLINE | UPTIME: &#x221E; | BUGS_SQUASHED: 999+
+  </text>
+  <text x="425" y="72" text-anchor="middle" class="mono pulse-anim" fill="#39ff14" font-size="10.5" letter-spacing="1.5">
     CONNECTION_STATUS: ONLINE | UPTIME: &#x221E; | BUGS_SQUASHED: 999+
   </text>
 
@@ -194,13 +176,18 @@
     <text x="760" y="108" text-anchor="end">CPU: &#x2588;&#x2588;&#x2588;&#x2588;&#x2591; 82%</text>
   </g>
 
-  <!-- Center bottom marker -->
-  <text x="425" y="100" text-anchor="middle" class="mono neon-flicker-2" fill="#00f0ff" font-size="7" opacity="0.4" filter="url(#glowCyan)">
+  <!-- Center bottom marker - multi-layer glow -->
+  <text x="425" y="101" text-anchor="middle" class="mono" fill="#00f0ff" font-size="7" opacity="0.15">
+    &#x25C0; SECTOR-7G :: NEURAL_LINK_ACTIVE &#x25B6;
+  </text>
+  <text x="425" y="100" text-anchor="middle" class="mono neon-flicker-2" fill="#00f0ff" font-size="7" opacity="0.5">
     &#x25C0; SECTOR-7G :: NEURAL_LINK_ACTIVE &#x25B6;
   </text>
 
-  <!-- Bottom neon line -->
-  <rect x="30" y="110" width="790" height="1.5" fill="url(#neonLine)" filter="url(#lineGlow)" class="neon-flicker-2"/>
+  <!-- Bottom neon line - multi-layer glow simulation -->
+  <rect x="29" y="109" width="792" height="3.5" fill="url(#neonLine)" opacity="0.1" rx="2" class="neon-flicker-2"/>
+  <rect x="30" y="110" width="790" height="1.5" fill="url(#neonLine)" opacity="0.6" class="neon-flicker-2"/>
+  <rect x="31" y="110.5" width="788" height="0.5" fill="white" opacity="0.15" class="neon-flicker-2"/>
 
   <!-- Scanlines overlay -->
   <rect width="850" height="120" fill="url(#scanlines)"/>
@@ -216,13 +203,5 @@
 
   <!-- Vignette edges -->
   <rect width="60" height="120" fill="url(#vigL)" opacity="0.5"/>
-  <linearGradient id="vigL" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0%" stop-color="#0a0a0f"/>
-    <stop offset="100%" stop-color="#0a0a0f" stop-opacity="0"/>
-  </linearGradient>
   <rect x="790" width="60" height="120" fill="url(#vigR)" opacity="0.5"/>
-  <linearGradient id="vigR" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0%" stop-color="#0a0a0f" stop-opacity="0"/>
-    <stop offset="100%" stop-color="#0a0a0f"/>
-  </linearGradient>
 </svg>
