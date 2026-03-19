@@ -1,0 +1,223 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 120" width="850" height="120">
+  <defs>
+    <!-- Ink wash gradient for clouds -->
+    <linearGradient id="fog1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0d1117" stop-opacity="1"/>
+      <stop offset="15%" stop-color="#5b8a8a" stop-opacity="0.25"/>
+      <stop offset="35%" stop-color="#7aafaf" stop-opacity="0.18"/>
+      <stop offset="50%" stop-color="#5b8a8a" stop-opacity="0.3"/>
+      <stop offset="70%" stop-color="#7aafaf" stop-opacity="0.12"/>
+      <stop offset="85%" stop-color="#5b8a8a" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="fog2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0d1117" stop-opacity="1"/>
+      <stop offset="20%" stop-color="#8ab4b4" stop-opacity="0.15"/>
+      <stop offset="45%" stop-color="#6a9e9e" stop-opacity="0.2"/>
+      <stop offset="60%" stop-color="#8ab4b4" stop-opacity="0.1"/>
+      <stop offset="80%" stop-color="#6a9e9e" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="fog3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0d1117" stop-opacity="1"/>
+      <stop offset="25%" stop-color="#6a9e9e" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#5b8a8a" stop-opacity="0.22"/>
+      <stop offset="75%" stop-color="#7aafaf" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="1"/>
+    </linearGradient>
+    <!-- Gold text gradient -->
+    <linearGradient id="goldText" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c9a84c"/>
+      <stop offset="30%" stop-color="#f0d68a"/>
+      <stop offset="50%" stop-color="#ffe4a0"/>
+      <stop offset="70%" stop-color="#f0d68a"/>
+      <stop offset="100%" stop-color="#c9a84c"/>
+    </linearGradient>
+    <!-- Subtle gold glow -->
+    <filter id="goldGlow" x="-5%" y="-30%" width="110%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Soft fog blur -->
+    <filter id="fogBlur">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="fogBlur2">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    <!-- Ink line gradient -->
+    <linearGradient id="inkLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0d1117" stop-opacity="1"/>
+      <stop offset="10%" stop-color="#5b8a8a" stop-opacity="0.6"/>
+      <stop offset="30%" stop-color="#c9a84c" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#f0d68a" stop-opacity="0.5"/>
+      <stop offset="70%" stop-color="#c9a84c" stop-opacity="0.4"/>
+      <stop offset="90%" stop-color="#5b8a8a" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="1"/>
+    </linearGradient>
+    <!-- Particle glow -->
+    <radialGradient id="particle">
+      <stop offset="0%" stop-color="#f0d68a" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#f0d68a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <style>
+    /* Cloud drift animations */
+    @keyframes drift1 {
+      0% { transform: translateX(0px); opacity: 0.6; }
+      50% { transform: translateX(40px); opacity: 0.9; }
+      100% { transform: translateX(0px); opacity: 0.6; }
+    }
+    @keyframes drift2 {
+      0% { transform: translateX(0px); opacity: 0.5; }
+      50% { transform: translateX(-35px); opacity: 0.8; }
+      100% { transform: translateX(0px); opacity: 0.5; }
+    }
+    @keyframes drift3 {
+      0% { transform: translateX(0px); opacity: 0.4; }
+      50% { transform: translateX(25px); opacity: 0.7; }
+      100% { transform: translateX(0px); opacity: 0.4; }
+    }
+    @keyframes drift4 {
+      0% { transform: translateX(0px); opacity: 0.3; }
+      50% { transform: translateX(-20px); opacity: 0.6; }
+      100% { transform: translateX(0px); opacity: 0.3; }
+    }
+    @keyframes shimmer {
+      0% { opacity: 0.3; }
+      50% { opacity: 0.8; }
+      100% { opacity: 0.3; }
+    }
+    @keyframes textGlow {
+      0% { opacity: 0.85; }
+      50% { opacity: 1; }
+      100% { opacity: 0.85; }
+    }
+    @keyframes particleFloat1 {
+      0% { transform: translateY(0px); opacity: 0; }
+      20% { opacity: 0.8; }
+      80% { opacity: 0.6; }
+      100% { transform: translateY(-18px); opacity: 0; }
+    }
+    @keyframes particleFloat2 {
+      0% { transform: translateY(0px); opacity: 0; }
+      25% { opacity: 0.7; }
+      75% { opacity: 0.5; }
+      100% { transform: translateY(-15px); opacity: 0; }
+    }
+    @keyframes particleFloat3 {
+      0% { transform: translateY(0px); opacity: 0; }
+      30% { opacity: 0.9; }
+      70% { opacity: 0.4; }
+      100% { transform: translateY(-20px); opacity: 0; }
+    }
+    @keyframes lineGlow {
+      0% { opacity: 0.4; }
+      50% { opacity: 0.7; }
+      100% { opacity: 0.4; }
+    }
+    .cloud1 { animation: drift1 12s ease-in-out infinite; }
+    .cloud2 { animation: drift2 15s ease-in-out infinite; }
+    .cloud3 { animation: drift3 10s ease-in-out infinite; }
+    .cloud4 { animation: drift4 18s ease-in-out infinite; }
+    .main-text { animation: textGlow 4s ease-in-out infinite; }
+    .p1 { animation: particleFloat1 5s ease-in-out infinite; }
+    .p2 { animation: particleFloat2 6s ease-in-out infinite 1s; }
+    .p3 { animation: particleFloat3 4.5s ease-in-out infinite 2s; }
+    .p4 { animation: particleFloat1 7s ease-in-out infinite 0.5s; }
+    .p5 { animation: particleFloat2 5.5s ease-in-out infinite 3s; }
+    .p6 { animation: particleFloat3 6.5s ease-in-out infinite 1.5s; }
+    .p7 { animation: particleFloat1 4s ease-in-out infinite 2.5s; }
+    .p8 { animation: particleFloat2 8s ease-in-out infinite 0.8s; }
+    .ink-line { animation: lineGlow 6s ease-in-out infinite; }
+    .shimmer1 { animation: shimmer 3s ease-in-out infinite; }
+    .shimmer2 { animation: shimmer 3s ease-in-out infinite 1.5s; }
+  </style>
+
+  <!-- Background -->
+  <rect width="850" height="120" fill="#0d1117"/>
+
+  <!-- ═══ Top divider: ink wash line ═══ -->
+  <!-- Main ink stroke line -->
+  <line x1="50" y1="12" x2="800" y2="12" stroke="url(#inkLine)" stroke-width="1.2" class="ink-line"/>
+  <!-- Thin accent lines -->
+  <line x1="120" y1="9" x2="730" y2="9" stroke="#5b8a8a" stroke-width="0.3" opacity="0.3" class="shimmer1"/>
+  <line x1="80" y1="15" x2="770" y2="15" stroke="#5b8a8a" stroke-width="0.3" opacity="0.25" class="shimmer2"/>
+
+  <!-- ═══ Cloud/fog layers ═══ -->
+  <!-- Layer 1: wide, subtle background fog -->
+  <ellipse cx="200" cy="20" rx="220" ry="14" fill="url(#fog1)" filter="url(#fogBlur2)" class="cloud1" opacity="0.5"/>
+  <ellipse cx="650" cy="22" rx="200" ry="12" fill="url(#fog2)" filter="url(#fogBlur2)" class="cloud2" opacity="0.4"/>
+
+  <!-- Layer 2: mid-ground fog wisps -->
+  <ellipse cx="380" cy="16" rx="160" ry="10" fill="url(#fog3)" filter="url(#fogBlur)" class="cloud3" opacity="0.5"/>
+  <ellipse cx="500" cy="25" rx="140" ry="8" fill="url(#fog1)" filter="url(#fogBlur)" class="cloud4" opacity="0.4"/>
+
+  <!-- Layer 3: small accent wisps -->
+  <ellipse cx="130" cy="18" rx="60" ry="6" fill="#7aafaf" filter="url(#fogBlur)" class="cloud2" opacity="0.15"/>
+  <ellipse cx="720" cy="15" rx="70" ry="7" fill="#7aafaf" filter="url(#fogBlur)" class="cloud1" opacity="0.12"/>
+
+  <!-- ═══ Floating golden particles (spiritual energy) ═══ -->
+  <circle cx="150" cy="35" r="1.5" fill="url(#particle)" class="p1"/>
+  <circle cx="280" cy="30" r="1" fill="url(#particle)" class="p2"/>
+  <circle cx="370" cy="38" r="1.2" fill="url(#particle)" class="p3"/>
+  <circle cx="460" cy="28" r="0.8" fill="url(#particle)" class="p4"/>
+  <circle cx="550" cy="36" r="1.3" fill="url(#particle)" class="p5"/>
+  <circle cx="640" cy="32" r="1" fill="url(#particle)" class="p6"/>
+  <circle cx="710" cy="40" r="1.5" fill="url(#particle)" class="p7"/>
+  <circle cx="420" cy="42" r="0.9" fill="url(#particle)" class="p8"/>
+
+  <!-- ═══ Main quote text ═══ -->
+  <text x="425" y="62" text-anchor="middle" fill="url(#goldText)" filter="url(#goldGlow)"
+        font-family="Georgia, 'Times New Roman', serif" font-size="17" font-style="italic"
+        letter-spacing="4" class="main-text">
+    代码即剑，Bug 即魔，Debug 即修行
+  </text>
+
+  <!-- ═══ Decorative side elements (sword motifs) ═══ -->
+  <!-- Left sword line -->
+  <line x1="95" y1="62" x2="145" y2="62" stroke="#c9a84c" stroke-width="0.6" opacity="0.5"/>
+  <line x1="140" y1="59" x2="150" y2="62" stroke="#c9a84c" stroke-width="0.6" opacity="0.5"/>
+  <line x1="140" y1="65" x2="150" y2="62" stroke="#c9a84c" stroke-width="0.6" opacity="0.5"/>
+  <!-- diamond shape at tip -->
+  <polygon points="88,62 95,59 102,62 95,65" fill="#c9a84c" opacity="0.35"/>
+
+  <!-- Right sword line -->
+  <line x1="705" y1="62" x2="755" y2="62" stroke="#c9a84c" stroke-width="0.6" opacity="0.5"/>
+  <line x1="700" y1="62" x2="710" y2="59" stroke="#c9a84c" stroke-width="0.6" opacity="0.5"/>
+  <line x1="700" y1="62" x2="710" y2="65" stroke="#c9a84c" stroke-width="0.6" opacity="0.5"/>
+  <!-- diamond shape at tip -->
+  <polygon points="748,62 755,59 762,62 755,65" fill="#c9a84c" opacity="0.35"/>
+
+  <!-- ═══ Bottom section ═══ -->
+  <!-- Subtle sub-text -->
+  <text x="425" y="85" text-anchor="middle" fill="#5b8a8a"
+        font-family="Georgia, 'Times New Roman', serif" font-size="10"
+        letter-spacing="6" opacity="0.5">
+    DAO OF CODE
+  </text>
+
+  <!-- Bottom fog layer -->
+  <ellipse cx="425" cy="108" rx="350" ry="18" fill="url(#fog2)" filter="url(#fogBlur2)" class="cloud3" opacity="0.35"/>
+  <ellipse cx="250" cy="112" rx="200" ry="14" fill="url(#fog1)" filter="url(#fogBlur2)" class="cloud1" opacity="0.25"/>
+  <ellipse cx="600" cy="110" rx="180" ry="12" fill="url(#fog3)" filter="url(#fogBlur2)" class="cloud4" opacity="0.3"/>
+
+  <!-- Bottom decorative line -->
+  <line x1="200" y1="100" x2="650" y2="100" stroke="url(#inkLine)" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Corner accents -->
+  <path d="M 10,110 L 10,95 Q 10,90 15,90 L 30,90" fill="none" stroke="#c9a84c" stroke-width="0.5" opacity="0.25"/>
+  <path d="M 840,110 L 840,95 Q 840,90 835,90 L 820,90" fill="none" stroke="#c9a84c" stroke-width="0.5" opacity="0.25"/>
+  <path d="M 10,10 L 10,25 Q 10,30 15,30 L 30,30" fill="none" stroke="#c9a84c" stroke-width="0.5" opacity="0.2"/>
+  <path d="M 840,10 L 840,25 Q 840,30 835,30 L 820,30" fill="none" stroke="#c9a84c" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Bottom particles -->
+  <circle cx="200" cy="105" r="0.8" fill="url(#particle)" class="p3"/>
+  <circle cx="350" cy="102" r="0.6" fill="url(#particle)" class="p5"/>
+  <circle cx="500" cy="106" r="0.7" fill="url(#particle)" class="p1"/>
+  <circle cx="650" cy="103" r="0.9" fill="url(#particle)" class="p7"/>
+</svg>
