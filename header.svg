@@ -1,447 +1,431 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 300" width="850" height="300">
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="300" viewBox="0 0 850 300">
   <defs>
-    <style>
-      /* ===== Cloud Drift ===== */
-      @keyframes cloudDrift1 {
-        0%   { transform: translateX(0); }
-        50%  { transform: translateX(60px); }
-        100% { transform: translateX(0); }
-      }
-      @keyframes cloudDrift2 {
-        0%   { transform: translateX(0); }
-        50%  { transform: translateX(-50px); }
-        100% { transform: translateX(0); }
-      }
-      @keyframes cloudDrift3 {
-        0%   { transform: translateX(0); }
-        50%  { transform: translateX(40px); }
-        100% { transform: translateX(0); }
-      }
-      .cloud1 { animation: cloudDrift1 18s ease-in-out infinite; }
-      .cloud2 { animation: cloudDrift2 22s ease-in-out infinite; }
-      .cloud3 { animation: cloudDrift3 15s ease-in-out infinite; }
-
-      /* ===== Sparkle / Star Particles ===== */
-      @keyframes sparkle {
-        0%, 100% { opacity: 0; }
-        50%      { opacity: 1; }
-      }
-      @keyframes sparkle2 {
-        0%, 100% { opacity: 0.1; }
-        40%      { opacity: 0.9; }
-        70%      { opacity: 0.3; }
-      }
-      .star { animation: sparkle 3s ease-in-out infinite; }
-      .star2 { animation: sparkle2 4s ease-in-out infinite; }
-
-      /* ===== Glow Pulse ===== */
-      @keyframes glowPulse {
-        0%, 100% { opacity: 0.3; }
-        50%      { opacity: 0.8; }
-      }
-      @keyframes glowPulse2 {
-        0%, 100% { opacity: 0.15; }
-        50%      { opacity: 0.5; }
-      }
-      .glow      { animation: glowPulse 4s ease-in-out infinite; }
-      .glow-soft { animation: glowPulse2 6s ease-in-out infinite; }
-
-      /* ===== Crane Flight ===== */
-      @keyframes craneFly {
-        0%   { transform: translate(0, 0); }
-        25%  { transform: translate(30px, -12px); }
-        50%  { transform: translate(65px, -5px); }
-        75%  { transform: translate(95px, -15px); }
-        100% { transform: translate(130px, -8px); }
-      }
-      @keyframes craneFly2 {
-        0%   { transform: translate(0, 0); }
-        25%  { transform: translate(20px, -8px); }
-        50%  { transform: translate(45px, -14px); }
-        75%  { transform: translate(70px, -6px); }
-        100% { transform: translate(100px, -10px); }
-      }
-      @keyframes craneWing {
-        0%, 100% { transform: scaleY(1); }
-        50%      { transform: scaleY(0.7); }
-      }
-      .crane1 { animation: craneFly 25s ease-in-out infinite alternate; }
-      .crane2 { animation: craneFly2 30s ease-in-out infinite alternate; }
-      .crane-wing { animation: craneWing 1.8s ease-in-out infinite; transform-origin: center; }
-
-      /* ===== Sword Qi ===== */
-      @keyframes swordQi {
-        0%   { opacity: 0; stroke-dashoffset: 200; }
-        30%  { opacity: 0.9; }
-        100% { opacity: 0; stroke-dashoffset: -200; }
-      }
-      @keyframes swordQi2 {
-        0%   { opacity: 0; stroke-dashoffset: 150; }
-        35%  { opacity: 0.7; }
-        100% { opacity: 0; stroke-dashoffset: -150; }
-      }
-      .sword-qi {
-        stroke-dasharray: 80 120;
-        animation: swordQi 5s ease-in-out infinite;
-      }
-      .sword-qi2 {
-        stroke-dasharray: 60 100;
-        animation: swordQi2 7s ease-in-out 1.5s infinite;
-      }
-
-      /* ===== Title Glow ===== */
-      @keyframes titleGlow {
-        0%, 100% { filter: drop-shadow(0 0 6px rgba(255,215,0,0.3)); }
-        50%      { filter: drop-shadow(0 0 18px rgba(255,215,0,0.7)); }
-      }
-      .title-glow { animation: titleGlow 4s ease-in-out infinite; }
-
-      /* ===== Moon Pulse ===== */
-      @keyframes moonPulse {
-        0%, 100% { opacity: 0.6; }
-        50%      { opacity: 0.9; }
-      }
-      .moon { animation: moonPulse 8s ease-in-out infinite; }
-
-      /* ===== Mist Rise ===== */
-      @keyframes mistRise {
-        0%, 100% { transform: translateY(0); opacity: 0.25; }
-        50%      { transform: translateY(-10px); opacity: 0.5; }
-      }
-      .mist { animation: mistRise 12s ease-in-out infinite; }
-
-      /* ===== Floating Petals ===== */
-      @keyframes petalFloat {
-        0%   { transform: translate(0, 0) rotate(0deg); opacity: 0; }
-        10%  { opacity: 0.8; }
-        90%  { opacity: 0.6; }
-        100% { transform: translate(80px, 60px) rotate(180deg); opacity: 0; }
-      }
-      .petal { animation: petalFloat 10s ease-in-out infinite; }
-    </style>
-
-    <!-- Radial glow for moon -->
-    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ffeebb" stop-opacity="0.9"/>
-      <stop offset="40%" stop-color="#ffd700" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#ffd700" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Background gradient -->
-    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#0a0e14"/>
-      <stop offset="40%" stop-color="#0d1117"/>
-      <stop offset="100%" stop-color="#111922"/>
+    <clipPath id="banner-clip"><rect width="850" height="300"/></clipPath>
+    <!-- Neon glow filters -->
+    <filter id="glow-pink" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feFlood flood-color="#ff2d95" flood-opacity="0.8" result="c"/>
+      <feComposite in="c" in2="b" operator="in" result="d"/>
+      <feMerge><feMergeNode in="d"/><feMergeNode in="d"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-cyan" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feFlood flood-color="#00f0ff" flood-opacity="0.7" result="c"/>
+      <feComposite in="c" in2="b" operator="in" result="d"/>
+      <feMerge><feMergeNode in="d"/><feMergeNode in="d"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-green" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feFlood flood-color="#39ff14" flood-opacity="0.6" result="c"/>
+      <feComposite in="c" in2="b" operator="in" result="d"/>
+      <feMerge><feMergeNode in="d"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Scanline pattern -->
+    <pattern id="scanlines" width="850" height="4" patternUnits="userSpaceOnUse">
+      <rect width="850" height="2" fill="rgba(0,0,0,0.3)"/>
+      <rect y="2" width="850" height="2" fill="transparent"/>
+    </pattern>
+    <!-- Grid pattern for ground -->
+    <linearGradient id="grid-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#00f0ff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0.5"/>
     </linearGradient>
-
-    <!-- Mountain gradient far -->
-    <linearGradient id="mtFar" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1a2332" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#0d1117" stop-opacity="0.9"/>
+    <linearGradient id="sky-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0a0f"/>
+      <stop offset="60%" stop-color="#0a0a0f"/>
+      <stop offset="85%" stop-color="#1a0030"/>
+      <stop offset="100%" stop-color="#0d0020"/>
     </linearGradient>
-
-    <!-- Mountain gradient mid -->
-    <linearGradient id="mtMid" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#162029"/>
-      <stop offset="100%" stop-color="#0d1117"/>
-    </linearGradient>
-
-    <!-- Mountain gradient near -->
-    <linearGradient id="mtNear" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#101820"/>
-      <stop offset="100%" stop-color="#0d1117"/>
-    </linearGradient>
-
-    <!-- Cloud gradient -->
-    <linearGradient id="cloudGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#7eb8c9" stop-opacity="0"/>
-      <stop offset="30%" stop-color="#7eb8c9" stop-opacity="0.15"/>
-      <stop offset="70%" stop-color="#7eb8c9" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#7eb8c9" stop-opacity="0"/>
-    </linearGradient>
-
-    <linearGradient id="cloudGrad2" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#7eb8c9" stop-opacity="0"/>
-      <stop offset="40%" stop-color="#7eb8c9" stop-opacity="0.1"/>
-      <stop offset="60%" stop-color="#7eb8c9" stop-opacity="0.08"/>
-      <stop offset="100%" stop-color="#7eb8c9" stop-opacity="0"/>
-    </linearGradient>
-
-    <!-- Sword glow -->
-    <linearGradient id="swordGlow" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#ffd700" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#ffd700" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#ffd700" stop-opacity="0"/>
-    </linearGradient>
-
-    <linearGradient id="swordGlow2" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#c94043" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#c94043" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#c94043" stop-opacity="0"/>
-    </linearGradient>
-
-    <!-- Water reflection -->
-    <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7eb8c9" stop-opacity="0.08"/>
-      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    <linearGradient id="horizon-glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff2d95" stop-opacity="0"/>
+      <stop offset="70%" stop-color="#ff2d95" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ff2d95" stop-opacity="0.25"/>
     </linearGradient>
   </defs>
 
-  <!-- ==================== BACKGROUND ==================== -->
-  <rect width="850" height="300" fill="url(#bgGrad)"/>
+  <style>
+    /* Glitch title animation */
+    @keyframes glitch {
+      0%, 100% { transform: translate(0, 0); }
+      2% { transform: translate(-3px, 1px); }
+      4% { transform: translate(3px, -1px); }
+      6% { transform: translate(-2px, 0); }
+      8% { transform: translate(0, 0); }
+      40% { transform: translate(0, 0); }
+      42% { transform: translate(4px, 1px); }
+      43% { transform: translate(-3px, -1px); }
+      44% { transform: translate(2px, 0); }
+      46% { transform: translate(0, 0); }
+      78% { transform: translate(0, 0); }
+      79% { transform: translate(-4px, 0); }
+      80% { transform: translate(3px, 1px); }
+      81% { transform: translate(0, 0); }
+    }
+    @keyframes glitch-r {
+      0%, 100% { transform: translate(0, 0); opacity: 0; }
+      2% { transform: translate(4px, -2px); opacity: 0.7; }
+      4% { transform: translate(-3px, 1px); opacity: 0.5; }
+      6% { transform: translate(2px, 0); opacity: 0; }
+      8%, 40% { transform: translate(0, 0); opacity: 0; }
+      42% { transform: translate(-5px, 2px); opacity: 0.6; }
+      44% { transform: translate(3px, -1px); opacity: 0.4; }
+      46%, 78% { transform: translate(0, 0); opacity: 0; }
+      79% { transform: translate(5px, 1px); opacity: 0.7; }
+      81% { transform: translate(0, 0); opacity: 0; }
+    }
+    @keyframes glitch-b {
+      0%, 100% { transform: translate(0, 0); opacity: 0; }
+      2% { transform: translate(-4px, 2px); opacity: 0.6; }
+      4% { transform: translate(3px, -1px); opacity: 0.4; }
+      6% { transform: translate(-2px, 0); opacity: 0; }
+      8%, 40% { transform: translate(0, 0); opacity: 0; }
+      42% { transform: translate(5px, -2px); opacity: 0.5; }
+      44% { transform: translate(-3px, 1px); opacity: 0.6; }
+      46%, 78% { transform: translate(0, 0); opacity: 0; }
+      79% { transform: translate(-5px, -1px); opacity: 0.6; }
+      81% { transform: translate(0, 0); opacity: 0; }
+    }
 
-  <!-- Subtle star field -->
-  <circle cx="120" cy="25"  r="1" fill="#fff" opacity="0.4" class="star" style="animation-delay:0s"/>
-  <circle cx="230" cy="45"  r="0.8" fill="#fff" opacity="0.3" class="star" style="animation-delay:0.8s"/>
-  <circle cx="350" cy="18"  r="1.2" fill="#ffd700" opacity="0.5" class="star2" style="animation-delay:0.3s"/>
-  <circle cx="480" cy="35"  r="0.7" fill="#fff" opacity="0.35" class="star" style="animation-delay:1.5s"/>
-  <circle cx="580" cy="22"  r="1" fill="#fff" opacity="0.4" class="star2" style="animation-delay:2s"/>
-  <circle cx="670" cy="50"  r="0.9" fill="#ffd700" opacity="0.4" class="star" style="animation-delay:0.5s"/>
-  <circle cx="750" cy="30"  r="1.1" fill="#fff" opacity="0.3" class="star2" style="animation-delay:1.2s"/>
-  <circle cx="60"  cy="55"  r="0.6" fill="#fff" opacity="0.25" class="star" style="animation-delay:2.5s"/>
-  <circle cx="310" cy="60"  r="0.8" fill="#ffd700" opacity="0.3" class="star2" style="animation-delay:1.8s"/>
-  <circle cx="800" cy="15"  r="0.7" fill="#fff" opacity="0.4" class="star" style="animation-delay:3s"/>
-  <circle cx="42"  cy="38"  r="1" fill="#fff" opacity="0.2" class="star2" style="animation-delay:0.6s"/>
-  <circle cx="695" cy="12"  r="0.9" fill="#ffd700" opacity="0.35" class="star" style="animation-delay:2.2s"/>
-  <circle cx="175" cy="65"  r="0.5" fill="#fff" opacity="0.3" class="star2" style="animation-delay:1s"/>
-  <circle cx="540" cy="55"  r="1" fill="#fff" opacity="0.25" class="star" style="animation-delay:3.5s"/>
-  <circle cx="420" cy="12"  r="0.8" fill="#ffd700" opacity="0.4" class="star2" style="animation-delay:0.2s"/>
+    .title-main { animation: glitch 3s infinite steps(1); }
+    .title-r { animation: glitch-r 3s infinite steps(1); }
+    .title-b { animation: glitch-b 3s infinite steps(1); }
 
-  <!-- ==================== MOON ==================== -->
-  <circle cx="700" cy="70" r="50" fill="url(#moonGlow)" class="moon"/>
-  <circle cx="700" cy="70" r="18" fill="#ffeebb" opacity="0.15" class="glow"/>
-  <circle cx="700" cy="70" r="8" fill="#ffeedd" opacity="0.25"/>
+    /* Neon pulse */
+    @keyframes neon-pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+      85% { opacity: 1; }
+      90% { opacity: 0.4; }
+      92% { opacity: 1; }
+    }
+    @keyframes neon-pulse-alt {
+      0%, 100% { opacity: 0.9; }
+      30% { opacity: 1; }
+      60% { opacity: 0.6; }
+      62% { opacity: 1; }
+      80% { opacity: 0.8; }
+    }
+    .neon-flicker { animation: neon-pulse 4s infinite; }
+    .neon-flicker-alt { animation: neon-pulse-alt 3.5s infinite; }
 
-  <!-- ==================== FAR MOUNTAINS (水墨远山) ==================== -->
-  <path d="M0 220
-    C30 200, 60 170, 100 155
-    C130 145, 150 160, 180 148
-    C210 136, 230 115, 260 108
-    C280 103, 290 110, 310 120
-    C340 132, 350 128, 370 118
-    C400 105, 420 95, 450 88
-    C470 83, 485 90, 500 100
-    C520 112, 530 108, 550 95
-    C575 80, 600 72, 630 78
-    C650 82, 660 90, 680 105
-    C700 118, 720 125, 740 115
-    C760 105, 780 112, 800 120
-    C820 128, 840 135, 850 140
-    L850 300 L0 300 Z"
-    fill="url(#mtFar)" opacity="0.6"/>
+    /* Scanline sweep */
+    @keyframes scanline-move {
+      0% { transform: translateY(-300px); }
+      100% { transform: translateY(300px); }
+    }
+    .scanline-sweep {
+      animation: scanline-move 6s linear infinite;
+    }
 
-  <!-- Mountain ink wash texture lines (far) -->
-  <path d="M220 118 C240 112, 250 108, 260 108 C270 108, 280 112, 295 116"
-    stroke="#2a3a4a" stroke-width="0.5" fill="none" opacity="0.4"/>
-  <path d="M430 92 C445 88, 455 86, 465 88"
-    stroke="#2a3a4a" stroke-width="0.5" fill="none" opacity="0.3"/>
+    /* Code rain animations - different speeds */
+    @keyframes rain1 { 0% { transform: translateY(-30px); opacity: 0; } 10% { opacity: 0.9; } 90% { opacity: 0.9; } 100% { transform: translateY(310px); opacity: 0; } }
+    @keyframes rain2 { 0% { transform: translateY(-50px); opacity: 0; } 15% { opacity: 0.7; } 85% { opacity: 0.7; } 100% { transform: translateY(320px); opacity: 0; } }
+    @keyframes rain3 { 0% { transform: translateY(-20px); opacity: 0; } 10% { opacity: 0.5; } 80% { opacity: 0.5; } 100% { transform: translateY(300px); opacity: 0; } }
+    @keyframes rain4 { 0% { transform: translateY(-40px); opacity: 0; } 12% { opacity: 0.8; } 88% { opacity: 0.6; } 100% { transform: translateY(330px); opacity: 0; } }
 
-  <!-- ==================== MID MOUNTAINS (水墨中景) ==================== -->
-  <path d="M0 260
-    C20 248, 50 230, 80 222
-    C110 214, 125 218, 140 225
-    C165 236, 175 230, 195 215
-    C215 200, 230 190, 260 182
-    C285 175, 300 180, 320 190
-    C335 198, 340 195, 350 188
-    L370 195
-    C400 210, 430 225, 460 232
-    C490 238, 510 230, 530 218
-    C555 205, 575 195, 600 188
-    C620 182, 635 188, 650 200
-    C670 215, 695 210, 720 195
-    C740 182, 760 178, 790 185
-    C810 190, 830 198, 850 205
-    L850 300 L0 300 Z"
-    fill="url(#mtMid)" opacity="0.75"/>
+    .rain-1 { animation: rain1 4.5s linear infinite; }
+    .rain-2 { animation: rain2 5.2s linear infinite; }
+    .rain-3 { animation: rain3 3.8s linear infinite; }
+    .rain-4 { animation: rain4 6s linear infinite; }
+    .rain-5 { animation: rain1 5.8s linear infinite; }
+    .rain-6 { animation: rain2 4.1s linear infinite; }
+    .rain-7 { animation: rain3 6.5s linear infinite; }
+    .rain-8 { animation: rain4 3.5s linear infinite; }
+    .rain-9 { animation: rain1 7s linear infinite; }
+    .rain-10 { animation: rain2 4.8s linear infinite; }
+    .rain-11 { animation: rain3 5.5s linear infinite; }
+    .rain-12 { animation: rain4 4.3s linear infinite; }
 
-  <!-- Ink wash detail strokes (mid mountains) -->
-  <path d="M240 185 Q250 180, 265 182" stroke="#1e2e3e" stroke-width="0.8" fill="none" opacity="0.4"/>
-  <path d="M580 192 Q595 186, 610 188" stroke="#1e2e3e" stroke-width="0.8" fill="none" opacity="0.3"/>
+    /* Window flicker */
+    @keyframes wflick1 { 0%,49%{opacity:0.1}50%,100%{opacity:0.9} }
+    @keyframes wflick2 { 0%,29%{opacity:0.8}30%,59%{opacity:0.1}60%,100%{opacity:0.7} }
+    @keyframes wflick3 { 0%,69%{opacity:0.1}70%,84%{opacity:0.9}85%,100%{opacity:0.2} }
+    @keyframes wflick4 { 0%,19%{opacity:0.9}20%,79%{opacity:0.1}80%,100%{opacity:0.6} }
+    @keyframes wflick5 { 0%,39%{opacity:0.2}40%,59%{opacity:0.8}60%,100%{opacity:0.1} }
+    @keyframes wflick6 { 0%,59%{opacity:0.7}60%,89%{opacity:0.1}90%,100%{opacity:0.9} }
 
-  <!-- ==================== PAGODA SILHOUETTE (远处宝塔) ==================== -->
-  <g opacity="0.3" transform="translate(155, 185)">
-    <!-- Tower body -->
-    <rect x="-3" y="0" width="6" height="30" fill="#1a2832"/>
-    <!-- Eaves -->
-    <path d="M-8 5 L0 1 L8 5" stroke="#1a2832" stroke-width="1.2" fill="none"/>
-    <path d="M-7 12 L0 8 L7 12" stroke="#1a2832" stroke-width="1" fill="none"/>
-    <path d="M-6 19 L0 15 L6 19" stroke="#1a2832" stroke-width="0.8" fill="none"/>
-    <path d="M-5 26 L0 22 L5 26" stroke="#1a2832" stroke-width="0.8" fill="none"/>
-    <!-- Spire -->
-    <line x1="0" y1="0" x2="0" y2="-6" stroke="#1a2832" stroke-width="0.8"/>
-  </g>
+    .wf1 { animation: wflick1 3s steps(1) infinite; }
+    .wf2 { animation: wflick2 4s steps(1) infinite; }
+    .wf3 { animation: wflick3 5s steps(1) infinite; }
+    .wf4 { animation: wflick4 3.5s steps(1) infinite; }
+    .wf5 { animation: wflick5 4.5s steps(1) infinite; }
+    .wf6 { animation: wflick6 2.8s steps(1) infinite; }
 
-  <!-- ==================== NEAR MOUNTAINS (近景) ==================== -->
-  <path d="M0 275
-    C30 268, 60 258, 90 255
-    C120 252, 140 260, 170 265
-    C200 270, 220 262, 240 255
-    L280 260 L320 270
-    C360 278, 400 280, 440 275
-    C470 270, 490 262, 510 255
-    C540 248, 565 245, 590 250
-    C620 256, 650 265, 680 270
-    C720 276, 760 272, 800 265
-    C820 260, 840 262, 850 265
-    L850 300 L0 300 Z"
-    fill="url(#mtNear)" opacity="0.85"/>
+    /* Subtitle typing cursor blink */
+    @keyframes cursor-blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    .cursor { animation: cursor-blink 1s steps(1) infinite; }
 
-  <!-- ==================== WATER / LAKE SURFACE ==================== -->
-  <rect x="0" y="272" width="850" height="28" fill="url(#waterGrad)" opacity="0.5"/>
-  <!-- Water ripple lines -->
-  <path d="M50 282 Q75 280, 100 282 Q125 284, 150 282" stroke="#7eb8c9" stroke-width="0.3" fill="none" opacity="0.15"/>
-  <path d="M300 286 Q330 284, 360 286 Q390 288, 420 286" stroke="#7eb8c9" stroke-width="0.3" fill="none" opacity="0.12"/>
-  <path d="M600 284 Q630 282, 660 284 Q690 286, 720 284" stroke="#7eb8c9" stroke-width="0.3" fill="none" opacity="0.1"/>
-  <path d="M180 290 Q200 288, 220 290" stroke="#7eb8c9" stroke-width="0.2" fill="none" opacity="0.1"/>
-  <path d="M500 292 Q525 290, 550 292" stroke="#7eb8c9" stroke-width="0.2" fill="none" opacity="0.08"/>
+    /* Horizon line pulse */
+    @keyframes horizon-pulse {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+    .horizon-line { animation: horizon-pulse 3s ease-in-out infinite; }
+  </style>
 
-  <!-- ==================== CLOUD LAYERS (云雾) ==================== -->
-  <!-- Cloud layer 1 - upper -->
-  <g class="cloud1">
-    <ellipse cx="150" cy="110" rx="120" ry="18" fill="url(#cloudGrad)" opacity="0.6"/>
-    <ellipse cx="200" cy="105" rx="80" ry="12" fill="#7eb8c9" opacity="0.06"/>
-  </g>
+  <g clip-path="url(#banner-clip)">
+    <!-- Background -->
+    <rect width="850" height="300" fill="url(#sky-grad)"/>
+    <rect width="850" height="300" fill="url(#horizon-glow)"/>
 
-  <!-- Cloud layer 2 - mid -->
-  <g class="cloud2">
-    <ellipse cx="550" cy="140" rx="150" ry="22" fill="url(#cloudGrad2)" opacity="0.5"/>
-    <ellipse cx="500" cy="135" rx="90" ry="14" fill="#7eb8c9" opacity="0.05"/>
-  </g>
-
-  <!-- Cloud layer 3 - lower -->
-  <g class="cloud3">
-    <ellipse cx="350" cy="195" rx="130" ry="16" fill="url(#cloudGrad)" opacity="0.4"/>
-    <ellipse cx="380" cy="200" rx="100" ry="10" fill="#7eb8c9" opacity="0.04"/>
-  </g>
-
-  <!-- Rising mist -->
-  <g class="mist">
-    <ellipse cx="100" cy="250" rx="80" ry="15" fill="#7eb8c9" opacity="0.08"/>
-  </g>
-  <g class="mist" style="animation-delay: 3s">
-    <ellipse cx="700" cy="240" rx="100" ry="12" fill="#7eb8c9" opacity="0.06"/>
-  </g>
-
-  <!-- ==================== CRANES (仙鹤) ==================== -->
-  <!-- Crane 1 -->
-  <g class="crane1" opacity="0.7">
-    <g transform="translate(100, 80)">
-      <!-- Body -->
-      <ellipse cx="0" cy="0" rx="5" ry="2" fill="#d4d4d4"/>
-      <!-- Wings -->
-      <path d="M-3 0 C-6 -5, -10 -8, -14 -6" stroke="#d4d4d4" stroke-width="0.8" fill="none" class="crane-wing"/>
-      <path d="M3 0 C6 -4, 10 -7, 13 -5" stroke="#d4d4d4" stroke-width="0.8" fill="none" class="crane-wing"/>
-      <!-- Head/neck -->
-      <path d="M5 -1 C7 -3, 8 -5, 9 -5" stroke="#d4d4d4" stroke-width="0.6" fill="none"/>
-      <circle cx="9.5" cy="-5.5" r="0.8" fill="#c94043"/>
-      <!-- Tail feathers -->
-      <path d="M-5 1 C-7 2, -8 3, -9 2" stroke="#222" stroke-width="0.5" fill="none"/>
+    <!-- Perspective grid ground (vaporwave style) -->
+    <g opacity="0.4">
+      <!-- Horizontal lines receding -->
+      <line x1="0" y1="300" x2="850" y2="300" stroke="#00f0ff" stroke-width="1.5" opacity="0.6"/>
+      <line x1="100" y1="285" x2="750" y2="285" stroke="#00f0ff" stroke-width="1" opacity="0.4"/>
+      <line x1="180" y1="272" x2="670" y2="272" stroke="#00f0ff" stroke-width="0.8" opacity="0.3"/>
+      <line x1="240" y1="262" x2="610" y2="262" stroke="#00f0ff" stroke-width="0.6" opacity="0.25"/>
+      <line x1="290" y1="254" x2="560" y2="254" stroke="#00f0ff" stroke-width="0.5" opacity="0.2"/>
+      <line x1="320" y1="248" x2="530" y2="248" stroke="#00f0ff" stroke-width="0.4" opacity="0.15"/>
+      <!-- Vertical lines converging to vanishing point (425, 220) -->
+      <line x1="0" y1="300" x2="425" y2="230" stroke="#00f0ff" stroke-width="0.5" opacity="0.2"/>
+      <line x1="85" y1="300" x2="425" y2="230" stroke="#00f0ff" stroke-width="0.5" opacity="0.2"/>
+      <line x1="170" y1="300" x2="425" y2="230" stroke="#00f0ff" stroke-width="0.5" opacity="0.22"/>
+      <line x1="255" y1="300" x2="425" y2="230" stroke="#00f0ff" stroke-width="0.5" opacity="0.25"/>
+      <line x1="340" y1="300" x2="425" y2="230" stroke="#00f0ff" stroke-width="0.5" opacity="0.28"/>
+      <line x1="425" y1="300" x2="425" y2="230" stroke="#00f0ff" stroke-width="0.6" opacity="0.3"/>
+      <line x1="510" y1="300" x2="425" y2="230" stroke="#00f0ff" stroke-width="0.5" opacity="0.28"/>
+      <line x1="595" y1="300" x2="425" y2="230" stroke="#00f0ff" stroke-width="0.5" opacity="0.25"/>
+      <line x1="680" y1="300" x2="425" y2="230" stroke="#00f0ff" stroke-width="0.5" opacity="0.22"/>
+      <line x1="765" y1="300" x2="425" y2="230" stroke="#00f0ff" stroke-width="0.5" opacity="0.2"/>
+      <line x1="850" y1="300" x2="425" y2="230" stroke="#00f0ff" stroke-width="0.5" opacity="0.2"/>
     </g>
-  </g>
 
-  <!-- Crane 2 -->
-  <g class="crane2" opacity="0.5">
-    <g transform="translate(180, 95) scale(0.8)">
-      <ellipse cx="0" cy="0" rx="5" ry="2" fill="#c8c8c8"/>
-      <path d="M-3 0 C-6 -5, -10 -7, -13 -5" stroke="#c8c8c8" stroke-width="0.7" fill="none" class="crane-wing"/>
-      <path d="M3 0 C6 -4, 9 -6, 12 -4" stroke="#c8c8c8" stroke-width="0.7" fill="none" class="crane-wing"/>
-      <path d="M5 -1 C7 -3, 8 -4, 9 -4" stroke="#c8c8c8" stroke-width="0.5" fill="none"/>
-      <circle cx="9.5" cy="-4.5" r="0.6" fill="#c94043"/>
+    <!-- Digital rain / matrix code columns -->
+    <g font-family="monospace" font-size="11" fill="#39ff14">
+      <!-- Column 1 -->
+      <text x="30" y="0" class="rain-1" opacity="0">0xF</text>
+      <text x="30" y="30" class="rain-1" opacity="0" style="animation-delay:-1.2s">int</text>
+      <text x="30" y="60" class="rain-1" opacity="0" style="animation-delay:-2.5s">A=1</text>
+      <text x="30" y="90" class="rain-1" opacity="0" style="animation-delay:-3.8s">}{</text>
+      <!-- Column 2 -->
+      <text x="80" y="0" class="rain-2" opacity="0">&amp;&amp;</text>
+      <text x="80" y="35" class="rain-2" opacity="0" style="animation-delay:-0.8s">for</text>
+      <text x="80" y="70" class="rain-2" opacity="0" style="animation-delay:-2s">++i</text>
+      <text x="80" y="105" class="rain-2" opacity="0" style="animation-delay:-3.3s">;</text>
+      <!-- Column 3 -->
+      <text x="130" y="0" class="rain-3" opacity="0">def</text>
+      <text x="130" y="28" class="rain-3" opacity="0" style="animation-delay:-1s">=()</text>
+      <text x="130" y="56" class="rain-3" opacity="0" style="animation-delay:-2.2s">ret</text>
+      <text x="130" y="84" class="rain-3" opacity="0" style="animation-delay:-3s">nil</text>
+      <!-- Column 4 -->
+      <text x="175" y="0" class="rain-4" opacity="0">sys</text>
+      <text x="175" y="32" class="rain-4" opacity="0" style="animation-delay:-1.5s">run</text>
+      <text x="175" y="64" class="rain-4" opacity="0" style="animation-delay:-2.8s">0x1</text>
+      <!-- Column 5 -->
+      <text x="680" y="0" class="rain-5" opacity="0">new</text>
+      <text x="680" y="30" class="rain-5" opacity="0" style="animation-delay:-0.6s">fn(</text>
+      <text x="680" y="60" class="rain-5" opacity="0" style="animation-delay:-1.8s">|&gt;</text>
+      <text x="680" y="90" class="rain-5" opacity="0" style="animation-delay:-3.2s">end</text>
+      <!-- Column 6 -->
+      <text x="720" y="0" class="rain-6" opacity="0">::</text>
+      <text x="720" y="34" class="rain-6" opacity="0" style="animation-delay:-1.1s">pub</text>
+      <text x="720" y="68" class="rain-6" opacity="0" style="animation-delay:-2.4s">mut</text>
+      <text x="720" y="102" class="rain-6" opacity="0" style="animation-delay:-3.6s">ref</text>
+      <!-- Column 7 -->
+      <text x="760" y="0" class="rain-7" opacity="0">ACK</text>
+      <text x="760" y="30" class="rain-7" opacity="0" style="animation-delay:-0.9s">TCP</text>
+      <text x="760" y="60" class="rain-7" opacity="0" style="animation-delay:-2.1s">SYN</text>
+      <!-- Column 8 -->
+      <text x="805" y="0" class="rain-8" opacity="0">010</text>
+      <text x="805" y="28" class="rain-8" opacity="0" style="animation-delay:-0.5s">101</text>
+      <text x="805" y="56" class="rain-8" opacity="0" style="animation-delay:-1.7s">110</text>
+      <text x="805" y="84" class="rain-8" opacity="0" style="animation-delay:-2.9s">001</text>
+      <!-- Extra side columns for density -->
+      <text x="10" y="0" class="rain-9" opacity="0" fill="#00f0ff" font-size="9">DP</text>
+      <text x="10" y="25" class="rain-9" opacity="0" style="animation-delay:-1.4s" fill="#00f0ff" font-size="9">AC</text>
+      <text x="10" y="50" class="rain-9" opacity="0" style="animation-delay:-3s" fill="#00f0ff" font-size="9">++</text>
+      <text x="835" y="0" class="rain-10" opacity="0" fill="#00f0ff" font-size="9">ff</text>
+      <text x="835" y="24" class="rain-10" opacity="0" style="animation-delay:-1.6s" fill="#00f0ff" font-size="9">0a</text>
+      <text x="210" y="0" class="rain-11" opacity="0" font-size="9">let</text>
+      <text x="210" y="26" class="rain-11" opacity="0" style="animation-delay:-2s" font-size="9">var</text>
+      <text x="640" y="0" class="rain-12" opacity="0" font-size="9">map</text>
+      <text x="640" y="28" class="rain-12" opacity="0" style="animation-delay:-1.3s" font-size="9">vec</text>
     </g>
+
+    <!-- City skyline silhouette -->
+    <g fill="#0a0a0f">
+      <!-- Far buildings (darker, subtler) -->
+      <rect x="0" y="200" width="45" height="100" fill="#0e0e18"/>
+      <rect x="42" y="185" width="35" height="115" fill="#0d0d15"/>
+      <rect x="75" y="195" width="50" height="105" fill="#0e0e18"/>
+      <rect x="122" y="175" width="30" height="125" fill="#0c0c14"/>
+      <rect x="150" y="190" width="55" height="110" fill="#0e0e18"/>
+      <rect x="200" y="170" width="40" height="130" fill="#0d0d15"/>
+      <rect x="238" y="185" width="35" height="115" fill="#0e0e18"/>
+
+      <rect x="570" y="180" width="40" height="120" fill="#0d0d15"/>
+      <rect x="608" y="190" width="50" height="110" fill="#0e0e18"/>
+      <rect x="655" y="170" width="35" height="130" fill="#0c0c14"/>
+      <rect x="688" y="185" width="45" height="115" fill="#0e0e18"/>
+      <rect x="730" y="195" width="55" height="105" fill="#0d0d15"/>
+      <rect x="782" y="180" width="35" height="120" fill="#0e0e18"/>
+      <rect x="815" y="190" width="40" height="110" fill="#0d0d15"/>
+
+      <!-- Antenna spires -->
+      <line x1="140" y1="175" x2="140" y2="155" stroke="#1a1a2e" stroke-width="2"/>
+      <line x1="220" y1="170" x2="220" y2="148" stroke="#1a1a2e" stroke-width="2"/>
+      <line x1="672" y1="170" x2="672" y2="145" stroke="#1a1a2e" stroke-width="2"/>
+      <!-- Antenna tip lights -->
+      <circle cx="140" cy="155" r="2" fill="#ff2d95" class="neon-flicker" opacity="0.8"/>
+      <circle cx="220" cy="148" r="2" fill="#00f0ff" class="neon-flicker-alt" opacity="0.8"/>
+      <circle cx="672" cy="145" r="2" fill="#ff2d95" class="neon-flicker" opacity="0.8"/>
+    </g>
+
+    <!-- Building windows (flickering) -->
+    <g>
+      <!-- Left cluster windows -->
+      <rect x="50" y="192" width="3" height="3" fill="#ffcc00" class="wf1"/>
+      <rect x="56" y="192" width="3" height="3" fill="#00f0ff" class="wf2"/>
+      <rect x="50" y="198" width="3" height="3" fill="#ff2d95" class="wf3"/>
+      <rect x="56" y="198" width="3" height="3" fill="#ffcc00" class="wf4"/>
+      <rect x="50" y="204" width="3" height="3" fill="#00f0ff" class="wf5"/>
+      <rect x="56" y="210" width="3" height="3" fill="#ff2d95" class="wf6"/>
+
+      <rect x="85" y="200" width="3" height="3" fill="#ffcc00" class="wf3"/>
+      <rect x="91" y="200" width="3" height="3" fill="#00f0ff" class="wf1"/>
+      <rect x="97" y="200" width="3" height="3" fill="#ff2d95" class="wf5"/>
+      <rect x="85" y="206" width="3" height="3" fill="#ffcc00" class="wf2"/>
+      <rect x="91" y="206" width="3" height="3" fill="#00f0ff" class="wf4"/>
+      <rect x="97" y="212" width="3" height="3" fill="#39ff14" class="wf6"/>
+
+      <rect x="130" y="180" width="3" height="3" fill="#00f0ff" class="wf4"/>
+      <rect x="136" y="180" width="3" height="3" fill="#ffcc00" class="wf1"/>
+      <rect x="130" y="186" width="3" height="3" fill="#ff2d95" class="wf6"/>
+      <rect x="136" y="192" width="3" height="3" fill="#00f0ff" class="wf3"/>
+
+      <rect x="160" y="196" width="3" height="3" fill="#ffcc00" class="wf5"/>
+      <rect x="166" y="196" width="3" height="3" fill="#00f0ff" class="wf2"/>
+      <rect x="172" y="196" width="3" height="3" fill="#ff2d95" class="wf4"/>
+      <rect x="160" y="202" width="3" height="3" fill="#39ff14" class="wf1"/>
+      <rect x="172" y="202" width="3" height="3" fill="#ffcc00" class="wf6"/>
+
+      <rect x="208" y="176" width="3" height="3" fill="#00f0ff" class="wf2"/>
+      <rect x="214" y="176" width="3" height="3" fill="#ff2d95" class="wf5"/>
+      <rect x="208" y="182" width="3" height="3" fill="#ffcc00" class="wf3"/>
+      <rect x="214" y="182" width="3" height="3" fill="#00f0ff" class="wf1"/>
+      <rect x="208" y="188" width="3" height="3" fill="#39ff14" class="wf4"/>
+      <rect x="214" y="194" width="3" height="3" fill="#ff2d95" class="wf6"/>
+
+      <!-- Right cluster windows -->
+      <rect x="578" y="186" width="3" height="3" fill="#ffcc00" class="wf3"/>
+      <rect x="584" y="186" width="3" height="3" fill="#00f0ff" class="wf5"/>
+      <rect x="578" y="192" width="3" height="3" fill="#ff2d95" class="wf1"/>
+      <rect x="584" y="198" width="3" height="3" fill="#ffcc00" class="wf4"/>
+
+      <rect x="618" y="196" width="3" height="3" fill="#00f0ff" class="wf2"/>
+      <rect x="624" y="196" width="3" height="3" fill="#ff2d95" class="wf6"/>
+      <rect x="630" y="196" width="3" height="3" fill="#39ff14" class="wf3"/>
+      <rect x="618" y="202" width="3" height="3" fill="#ffcc00" class="wf1"/>
+      <rect x="624" y="202" width="3" height="3" fill="#00f0ff" class="wf5"/>
+
+      <rect x="662" y="176" width="3" height="3" fill="#ff2d95" class="wf4"/>
+      <rect x="668" y="176" width="3" height="3" fill="#ffcc00" class="wf2"/>
+      <rect x="662" y="182" width="3" height="3" fill="#00f0ff" class="wf6"/>
+      <rect x="668" y="188" width="3" height="3" fill="#39ff14" class="wf1"/>
+
+      <rect x="696" y="190" width="3" height="3" fill="#ffcc00" class="wf5"/>
+      <rect x="702" y="190" width="3" height="3" fill="#00f0ff" class="wf3"/>
+      <rect x="708" y="190" width="3" height="3" fill="#ff2d95" class="wf1"/>
+      <rect x="696" y="196" width="3" height="3" fill="#39ff14" class="wf4"/>
+      <rect x="702" y="196" width="3" height="3" fill="#ffcc00" class="wf6"/>
+      <rect x="708" y="202" width="3" height="3" fill="#00f0ff" class="wf2"/>
+
+      <rect x="742" y="200" width="3" height="3" fill="#ff2d95" class="wf3"/>
+      <rect x="748" y="200" width="3" height="3" fill="#ffcc00" class="wf5"/>
+      <rect x="754" y="200" width="3" height="3" fill="#00f0ff" class="wf1"/>
+      <rect x="748" y="206" width="3" height="3" fill="#39ff14" class="wf2"/>
+
+      <rect x="790" y="186" width="3" height="3" fill="#ffcc00" class="wf6"/>
+      <rect x="796" y="186" width="3" height="3" fill="#00f0ff" class="wf4"/>
+      <rect x="790" y="192" width="3" height="3" fill="#ff2d95" class="wf1"/>
+    </g>
+
+    <!-- Neon horizon line -->
+    <line x1="0" y1="248" x2="850" y2="248" stroke="#ff2d95" stroke-width="1.5" opacity="0.5" class="horizon-line" filter="url(#glow-pink)"/>
+
+    <!-- Decorative neon accents on buildings -->
+    <line x1="150" y1="190" x2="205" y2="190" stroke="#ff2d95" stroke-width="1" opacity="0.6" class="neon-flicker" filter="url(#glow-pink)"/>
+    <line x1="608" y1="190" x2="658" y2="190" stroke="#00f0ff" stroke-width="1" opacity="0.6" class="neon-flicker-alt" filter="url(#glow-cyan)"/>
+
+    <!-- ===== MAIN TITLE: "Daily-AC" with glitch effect ===== -->
+    <g transform="translate(425, 115)" text-anchor="middle">
+      <!-- Glitch layer: red channel offset -->
+      <text class="title-r" font-family="'Courier New', monospace" font-size="72" font-weight="bold"
+            fill="#ff2d95" opacity="0" x="0" y="0">Daily-AC</text>
+      <!-- Glitch layer: blue channel offset -->
+      <text class="title-b" font-family="'Courier New', monospace" font-size="72" font-weight="bold"
+            fill="#00f0ff" opacity="0" x="0" y="0">Daily-AC</text>
+      <!-- Main title -->
+      <text class="title-main" font-family="'Courier New', monospace" font-size="72" font-weight="bold"
+            fill="#ffffff" filter="url(#glow-soft)" x="0" y="0">Daily-AC</text>
+    </g>
+
+    <!-- Neon underline decoration -->
+    <g class="neon-flicker">
+      <line x1="260" y1="132" x2="385" y2="132" stroke="#ff2d95" stroke-width="2" filter="url(#glow-pink)"/>
+      <line x1="465" y1="132" x2="590" y2="132" stroke="#00f0ff" stroke-width="2" filter="url(#glow-cyan)"/>
+      <rect x="385" y="130" width="80" height="4" fill="#39ff14" opacity="0.8" filter="url(#glow-green)"/>
+    </g>
+
+    <!-- Subtitle -->
+    <g transform="translate(425, 160)" text-anchor="middle">
+      <text font-family="'Courier New', monospace" font-size="14" fill="#00f0ff" letter-spacing="4" opacity="0.9" filter="url(#glow-cyan)">
+        SYSTEM ONLINE // CODE.COMPILE.CONQUER
+      </text>
+      <!-- Blinking cursor -->
+      <rect x="248" y="-12" width="8" height="14" fill="#39ff14" class="cursor" opacity="0.9"/>
+    </g>
+
+    <!-- Status bar decorations -->
+    <g font-family="'Courier New', monospace" font-size="9" fill="#39ff14" opacity="0.5">
+      <text x="15" y="18" class="neon-flicker-alt">[SYS:ACTIVE]</text>
+      <text x="740" y="18" class="neon-flicker">[NET:CONNECTED]</text>
+      <text x="15" y="295" class="neon-flicker">&gt;_ READY</text>
+      <text x="720" y="295" class="neon-flicker-alt">v2.0.26 // 2026</text>
+    </g>
+
+    <!-- Corner decorations (cyber frame) -->
+    <g stroke="#ff2d95" stroke-width="1.5" opacity="0.5" class="neon-flicker">
+      <!-- Top-left corner -->
+      <line x1="5" y1="5" x2="40" y2="5"/>
+      <line x1="5" y1="5" x2="5" y2="40"/>
+      <!-- Top-right corner -->
+      <line x1="810" y1="5" x2="845" y2="5"/>
+      <line x1="845" y1="5" x2="845" y2="40"/>
+      <!-- Bottom-left corner -->
+      <line x1="5" y1="260" x2="5" y2="295"/>
+      <line x1="5" y1="295" x2="40" y2="295"/>
+      <!-- Bottom-right corner -->
+      <line x1="845" y1="260" x2="845" y2="295"/>
+      <line x1="810" y1="295" x2="845" y2="295"/>
+    </g>
+    <g stroke="#00f0ff" stroke-width="1" opacity="0.3" class="neon-flicker-alt">
+      <line x1="8" y1="8" x2="30" y2="8"/>
+      <line x1="8" y1="8" x2="8" y2="30"/>
+      <line x1="820" y1="8" x2="842" y2="8"/>
+      <line x1="842" y1="8" x2="842" y2="30"/>
+      <line x1="8" y1="270" x2="8" y2="292"/>
+      <line x1="8" y1="292" x2="30" y2="292"/>
+      <line x1="842" y1="270" x2="842" y2="292"/>
+      <line x1="820" y1="292" x2="842" y2="292"/>
+    </g>
+
+    <!-- Scanlines overlay (static) -->
+    <rect width="850" height="300" fill="url(#scanlines)" opacity="0.4"/>
+
+    <!-- Moving scanline highlight -->
+    <rect class="scanline-sweep" x="0" y="0" width="850" height="8" fill="#00f0ff" opacity="0.04"/>
+
+    <!-- Vignette edges -->
+    <rect width="850" height="300" fill="transparent" stroke="#0a0a0f" stroke-width="30" opacity="0.5"/>
   </g>
-
-  <!-- ==================== SWORD QI (剑气光芒) ==================== -->
-  <line x1="580" y1="60" x2="750" y2="130" stroke="url(#swordGlow)" stroke-width="1.5" class="sword-qi" opacity="0.6"/>
-  <line x1="620" y1="45" x2="780" y2="110" stroke="url(#swordGlow)" stroke-width="1" class="sword-qi2" opacity="0.4"/>
-  <line x1="60" y1="140" x2="200" y2="90" stroke="url(#swordGlow2)" stroke-width="1.2" class="sword-qi" style="animation-delay:2s" opacity="0.35"/>
-
-  <!-- ==================== FLOATING PETALS (花瓣) ==================== -->
-  <g class="petal" style="animation-delay: 0s" opacity="0.6">
-    <ellipse cx="650" cy="60" rx="2.5" ry="1.2" fill="#c94043" transform="rotate(30 650 60)"/>
-  </g>
-  <g class="petal" style="animation-delay: 3s" opacity="0.5">
-    <ellipse cx="100" cy="90" rx="2" ry="1" fill="#c94043" transform="rotate(-20 100 90)"/>
-  </g>
-  <g class="petal" style="animation-delay: 6s" opacity="0.4">
-    <ellipse cx="400" cy="50" rx="2.2" ry="1.1" fill="#c94043" transform="rotate(45 400 50)"/>
-  </g>
-  <g class="petal" style="animation-delay: 1.5s" opacity="0.5">
-    <ellipse cx="300" cy="75" rx="1.8" ry="0.9" fill="#e8606a" transform="rotate(15 300 75)"/>
-  </g>
-  <g class="petal" style="animation-delay: 4.5s" opacity="0.35">
-    <ellipse cx="750" cy="85" rx="2" ry="1" fill="#c94043" transform="rotate(-35 750 85)"/>
-  </g>
-
-  <!-- ==================== DECORATIVE ELEMENTS ==================== -->
-  <!-- Taiji / Yin-Yang hint (subtle) -->
-  <circle cx="42" cy="150" r="12" stroke="#ffd700" stroke-width="0.3" fill="none" opacity="0.15" class="glow-soft"/>
-  <circle cx="808" cy="150" r="12" stroke="#ffd700" stroke-width="0.3" fill="none" opacity="0.15" class="glow-soft" style="animation-delay:3s"/>
-
-  <!-- Corner decorative brackets -->
-  <path d="M15 15 L15 35 M15 15 L35 15" stroke="#ffd700" stroke-width="0.8" fill="none" opacity="0.25"/>
-  <path d="M835 15 L835 35 M835 15 L815 15" stroke="#ffd700" stroke-width="0.8" fill="none" opacity="0.25"/>
-  <path d="M15 285 L15 265 M15 285 L35 285" stroke="#ffd700" stroke-width="0.8" fill="none" opacity="0.25"/>
-  <path d="M835 285 L835 265 M835 285 L815 285" stroke="#ffd700" stroke-width="0.8" fill="none" opacity="0.25"/>
-
-  <!-- Thin border frame -->
-  <rect x="10" y="10" width="830" height="280" rx="2" ry="2" stroke="#ffd700" stroke-width="0.4" fill="none" opacity="0.12"/>
-
-  <!-- ==================== TITLE: "Daily-AC" ==================== -->
-  <g class="title-glow">
-    <!-- Shadow layer -->
-    <text x="425" y="130" text-anchor="middle"
-      font-family="Georgia, 'Times New Roman', 'Noto Serif SC', 'Source Han Serif SC', 'SimSun', serif"
-      font-size="58" font-weight="bold" font-style="italic"
-      fill="#000" opacity="0.4"
-      letter-spacing="6"
-      transform="translate(2,2)">
-      Daily-AC
-    </text>
-    <!-- Main text -->
-    <text x="425" y="130" text-anchor="middle"
-      font-family="Georgia, 'Times New Roman', 'Noto Serif SC', 'Source Han Serif SC', 'SimSun', serif"
-      font-size="58" font-weight="bold" font-style="italic"
-      fill="#ffd700"
-      letter-spacing="6">
-      Daily-AC
-    </text>
-  </g>
-
-  <!-- Decorative line under title -->
-  <line x1="310" y1="142" x2="540" y2="142" stroke="#ffd700" stroke-width="0.6" opacity="0.3"/>
-  <circle cx="425" cy="142" r="2" fill="#ffd700" opacity="0.4"/>
-  <circle cx="310" cy="142" r="1.2" fill="#c94043" opacity="0.4"/>
-  <circle cx="540" cy="142" r="1.2" fill="#c94043" opacity="0.4"/>
-
-  <!-- ==================== SUBTITLE ==================== -->
-  <text x="425" y="170" text-anchor="middle"
-    font-family="'Noto Serif SC', 'Source Han Serif SC', 'KaiTi', 'STKaiti', 'SimSun', serif"
-    font-size="16" fill="#7eb8c9" opacity="0.8"
-    letter-spacing="8">
-    御剑乘风来，除魔天地间
-  </text>
-
-  <!-- ==================== SMALL TAGLINE ==================== -->
-  <text x="425" y="198" text-anchor="middle"
-    font-family="'Courier New', 'Consolas', monospace"
-    font-size="10" fill="#7eb8c9" opacity="0.35"
-    letter-spacing="3">
-    Competitive Programming · Algorithm · Code
-  </text>
-
-  <!-- ==================== EXTRA GLOW PARTICLES ==================== -->
-  <circle cx="340" cy="120" r="1.5" fill="#ffd700" opacity="0.3" class="star" style="animation-delay:0.5s"/>
-  <circle cx="510" cy="125" r="1.5" fill="#ffd700" opacity="0.3" class="star" style="animation-delay:1s"/>
-  <circle cx="375" cy="145" r="1" fill="#ffd700" opacity="0.2" class="star2" style="animation-delay:2s"/>
-  <circle cx="475" cy="145" r="1" fill="#ffd700" opacity="0.2" class="star2" style="animation-delay:2.5s"/>
-  <circle cx="425" cy="108" r="1.8" fill="#ffd700" opacity="0.2" class="star2" style="animation-delay:0.8s"/>
-
-  <!-- Title flanking sparkles -->
-  <circle cx="290" cy="120" r="2" fill="#ffd700" opacity="0.25" class="glow"/>
-  <circle cx="560" cy="120" r="2" fill="#ffd700" opacity="0.25" class="glow" style="animation-delay:2s"/>
-
-  <!-- Large ambient glow spots -->
-  <circle cx="425" cy="140" r="80" fill="#ffd700" opacity="0.02" class="glow-soft"/>
-  <circle cx="700" cy="70" r="60" fill="#ffeebb" opacity="0.03" class="glow-soft" style="animation-delay:2s"/>
 </svg>
