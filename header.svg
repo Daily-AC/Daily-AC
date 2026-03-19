@@ -1,0 +1,447 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 300" width="850" height="300">
+  <defs>
+    <style>
+      /* ===== Cloud Drift ===== */
+      @keyframes cloudDrift1 {
+        0%   { transform: translateX(0); }
+        50%  { transform: translateX(60px); }
+        100% { transform: translateX(0); }
+      }
+      @keyframes cloudDrift2 {
+        0%   { transform: translateX(0); }
+        50%  { transform: translateX(-50px); }
+        100% { transform: translateX(0); }
+      }
+      @keyframes cloudDrift3 {
+        0%   { transform: translateX(0); }
+        50%  { transform: translateX(40px); }
+        100% { transform: translateX(0); }
+      }
+      .cloud1 { animation: cloudDrift1 18s ease-in-out infinite; }
+      .cloud2 { animation: cloudDrift2 22s ease-in-out infinite; }
+      .cloud3 { animation: cloudDrift3 15s ease-in-out infinite; }
+
+      /* ===== Sparkle / Star Particles ===== */
+      @keyframes sparkle {
+        0%, 100% { opacity: 0; }
+        50%      { opacity: 1; }
+      }
+      @keyframes sparkle2 {
+        0%, 100% { opacity: 0.1; }
+        40%      { opacity: 0.9; }
+        70%      { opacity: 0.3; }
+      }
+      .star { animation: sparkle 3s ease-in-out infinite; }
+      .star2 { animation: sparkle2 4s ease-in-out infinite; }
+
+      /* ===== Glow Pulse ===== */
+      @keyframes glowPulse {
+        0%, 100% { opacity: 0.3; }
+        50%      { opacity: 0.8; }
+      }
+      @keyframes glowPulse2 {
+        0%, 100% { opacity: 0.15; }
+        50%      { opacity: 0.5; }
+      }
+      .glow      { animation: glowPulse 4s ease-in-out infinite; }
+      .glow-soft { animation: glowPulse2 6s ease-in-out infinite; }
+
+      /* ===== Crane Flight ===== */
+      @keyframes craneFly {
+        0%   { transform: translate(0, 0); }
+        25%  { transform: translate(30px, -12px); }
+        50%  { transform: translate(65px, -5px); }
+        75%  { transform: translate(95px, -15px); }
+        100% { transform: translate(130px, -8px); }
+      }
+      @keyframes craneFly2 {
+        0%   { transform: translate(0, 0); }
+        25%  { transform: translate(20px, -8px); }
+        50%  { transform: translate(45px, -14px); }
+        75%  { transform: translate(70px, -6px); }
+        100% { transform: translate(100px, -10px); }
+      }
+      @keyframes craneWing {
+        0%, 100% { transform: scaleY(1); }
+        50%      { transform: scaleY(0.7); }
+      }
+      .crane1 { animation: craneFly 25s ease-in-out infinite alternate; }
+      .crane2 { animation: craneFly2 30s ease-in-out infinite alternate; }
+      .crane-wing { animation: craneWing 1.8s ease-in-out infinite; transform-origin: center; }
+
+      /* ===== Sword Qi ===== */
+      @keyframes swordQi {
+        0%   { opacity: 0; stroke-dashoffset: 200; }
+        30%  { opacity: 0.9; }
+        100% { opacity: 0; stroke-dashoffset: -200; }
+      }
+      @keyframes swordQi2 {
+        0%   { opacity: 0; stroke-dashoffset: 150; }
+        35%  { opacity: 0.7; }
+        100% { opacity: 0; stroke-dashoffset: -150; }
+      }
+      .sword-qi {
+        stroke-dasharray: 80 120;
+        animation: swordQi 5s ease-in-out infinite;
+      }
+      .sword-qi2 {
+        stroke-dasharray: 60 100;
+        animation: swordQi2 7s ease-in-out 1.5s infinite;
+      }
+
+      /* ===== Title Glow ===== */
+      @keyframes titleGlow {
+        0%, 100% { filter: drop-shadow(0 0 6px rgba(255,215,0,0.3)); }
+        50%      { filter: drop-shadow(0 0 18px rgba(255,215,0,0.7)); }
+      }
+      .title-glow { animation: titleGlow 4s ease-in-out infinite; }
+
+      /* ===== Moon Pulse ===== */
+      @keyframes moonPulse {
+        0%, 100% { opacity: 0.6; }
+        50%      { opacity: 0.9; }
+      }
+      .moon { animation: moonPulse 8s ease-in-out infinite; }
+
+      /* ===== Mist Rise ===== */
+      @keyframes mistRise {
+        0%, 100% { transform: translateY(0); opacity: 0.25; }
+        50%      { transform: translateY(-10px); opacity: 0.5; }
+      }
+      .mist { animation: mistRise 12s ease-in-out infinite; }
+
+      /* ===== Floating Petals ===== */
+      @keyframes petalFloat {
+        0%   { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+        10%  { opacity: 0.8; }
+        90%  { opacity: 0.6; }
+        100% { transform: translate(80px, 60px) rotate(180deg); opacity: 0; }
+      }
+      .petal { animation: petalFloat 10s ease-in-out infinite; }
+    </style>
+
+    <!-- Radial glow for moon -->
+    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffeebb" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#ffd700" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ffd700" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0e14"/>
+      <stop offset="40%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#111922"/>
+    </linearGradient>
+
+    <!-- Mountain gradient far -->
+    <linearGradient id="mtFar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2332" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <!-- Mountain gradient mid -->
+    <linearGradient id="mtMid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#162029"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+
+    <!-- Mountain gradient near -->
+    <linearGradient id="mtNear" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#101820"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+
+    <!-- Cloud gradient -->
+    <linearGradient id="cloudGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7eb8c9" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#7eb8c9" stop-opacity="0.15"/>
+      <stop offset="70%" stop-color="#7eb8c9" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#7eb8c9" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="cloudGrad2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7eb8c9" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#7eb8c9" stop-opacity="0.1"/>
+      <stop offset="60%" stop-color="#7eb8c9" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#7eb8c9" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Sword glow -->
+    <linearGradient id="swordGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffd700" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffd700" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ffd700" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="swordGlow2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c94043" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#c94043" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#c94043" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Water reflection -->
+    <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7eb8c9" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ==================== BACKGROUND ==================== -->
+  <rect width="850" height="300" fill="url(#bgGrad)"/>
+
+  <!-- Subtle star field -->
+  <circle cx="120" cy="25"  r="1" fill="#fff" opacity="0.4" class="star" style="animation-delay:0s"/>
+  <circle cx="230" cy="45"  r="0.8" fill="#fff" opacity="0.3" class="star" style="animation-delay:0.8s"/>
+  <circle cx="350" cy="18"  r="1.2" fill="#ffd700" opacity="0.5" class="star2" style="animation-delay:0.3s"/>
+  <circle cx="480" cy="35"  r="0.7" fill="#fff" opacity="0.35" class="star" style="animation-delay:1.5s"/>
+  <circle cx="580" cy="22"  r="1" fill="#fff" opacity="0.4" class="star2" style="animation-delay:2s"/>
+  <circle cx="670" cy="50"  r="0.9" fill="#ffd700" opacity="0.4" class="star" style="animation-delay:0.5s"/>
+  <circle cx="750" cy="30"  r="1.1" fill="#fff" opacity="0.3" class="star2" style="animation-delay:1.2s"/>
+  <circle cx="60"  cy="55"  r="0.6" fill="#fff" opacity="0.25" class="star" style="animation-delay:2.5s"/>
+  <circle cx="310" cy="60"  r="0.8" fill="#ffd700" opacity="0.3" class="star2" style="animation-delay:1.8s"/>
+  <circle cx="800" cy="15"  r="0.7" fill="#fff" opacity="0.4" class="star" style="animation-delay:3s"/>
+  <circle cx="42"  cy="38"  r="1" fill="#fff" opacity="0.2" class="star2" style="animation-delay:0.6s"/>
+  <circle cx="695" cy="12"  r="0.9" fill="#ffd700" opacity="0.35" class="star" style="animation-delay:2.2s"/>
+  <circle cx="175" cy="65"  r="0.5" fill="#fff" opacity="0.3" class="star2" style="animation-delay:1s"/>
+  <circle cx="540" cy="55"  r="1" fill="#fff" opacity="0.25" class="star" style="animation-delay:3.5s"/>
+  <circle cx="420" cy="12"  r="0.8" fill="#ffd700" opacity="0.4" class="star2" style="animation-delay:0.2s"/>
+
+  <!-- ==================== MOON ==================== -->
+  <circle cx="700" cy="70" r="50" fill="url(#moonGlow)" class="moon"/>
+  <circle cx="700" cy="70" r="18" fill="#ffeebb" opacity="0.15" class="glow"/>
+  <circle cx="700" cy="70" r="8" fill="#ffeedd" opacity="0.25"/>
+
+  <!-- ==================== FAR MOUNTAINS (水墨远山) ==================== -->
+  <path d="M0 220
+    C30 200, 60 170, 100 155
+    C130 145, 150 160, 180 148
+    C210 136, 230 115, 260 108
+    C280 103, 290 110, 310 120
+    C340 132, 350 128, 370 118
+    C400 105, 420 95, 450 88
+    C470 83, 485 90, 500 100
+    C520 112, 530 108, 550 95
+    C575 80, 600 72, 630 78
+    C650 82, 660 90, 680 105
+    C700 118, 720 125, 740 115
+    C760 105, 780 112, 800 120
+    C820 128, 840 135, 850 140
+    L850 300 L0 300 Z"
+    fill="url(#mtFar)" opacity="0.6"/>
+
+  <!-- Mountain ink wash texture lines (far) -->
+  <path d="M220 118 C240 112, 250 108, 260 108 C270 108, 280 112, 295 116"
+    stroke="#2a3a4a" stroke-width="0.5" fill="none" opacity="0.4"/>
+  <path d="M430 92 C445 88, 455 86, 465 88"
+    stroke="#2a3a4a" stroke-width="0.5" fill="none" opacity="0.3"/>
+
+  <!-- ==================== MID MOUNTAINS (水墨中景) ==================== -->
+  <path d="M0 260
+    C20 248, 50 230, 80 222
+    C110 214, 125 218, 140 225
+    C165 236, 175 230, 195 215
+    C215 200, 230 190, 260 182
+    C285 175, 300 180, 320 190
+    C335 198, 340 195, 350 188
+    L370 195
+    C400 210, 430 225, 460 232
+    C490 238, 510 230, 530 218
+    C555 205, 575 195, 600 188
+    C620 182, 635 188, 650 200
+    C670 215, 695 210, 720 195
+    C740 182, 760 178, 790 185
+    C810 190, 830 198, 850 205
+    L850 300 L0 300 Z"
+    fill="url(#mtMid)" opacity="0.75"/>
+
+  <!-- Ink wash detail strokes (mid mountains) -->
+  <path d="M240 185 Q250 180, 265 182" stroke="#1e2e3e" stroke-width="0.8" fill="none" opacity="0.4"/>
+  <path d="M580 192 Q595 186, 610 188" stroke="#1e2e3e" stroke-width="0.8" fill="none" opacity="0.3"/>
+
+  <!-- ==================== PAGODA SILHOUETTE (远处宝塔) ==================== -->
+  <g opacity="0.3" transform="translate(155, 185)">
+    <!-- Tower body -->
+    <rect x="-3" y="0" width="6" height="30" fill="#1a2832"/>
+    <!-- Eaves -->
+    <path d="M-8 5 L0 1 L8 5" stroke="#1a2832" stroke-width="1.2" fill="none"/>
+    <path d="M-7 12 L0 8 L7 12" stroke="#1a2832" stroke-width="1" fill="none"/>
+    <path d="M-6 19 L0 15 L6 19" stroke="#1a2832" stroke-width="0.8" fill="none"/>
+    <path d="M-5 26 L0 22 L5 26" stroke="#1a2832" stroke-width="0.8" fill="none"/>
+    <!-- Spire -->
+    <line x1="0" y1="0" x2="0" y2="-6" stroke="#1a2832" stroke-width="0.8"/>
+  </g>
+
+  <!-- ==================== NEAR MOUNTAINS (近景) ==================== -->
+  <path d="M0 275
+    C30 268, 60 258, 90 255
+    C120 252, 140 260, 170 265
+    C200 270, 220 262, 240 255
+    L280 260 L320 270
+    C360 278, 400 280, 440 275
+    C470 270, 490 262, 510 255
+    C540 248, 565 245, 590 250
+    C620 256, 650 265, 680 270
+    C720 276, 760 272, 800 265
+    C820 260, 840 262, 850 265
+    L850 300 L0 300 Z"
+    fill="url(#mtNear)" opacity="0.85"/>
+
+  <!-- ==================== WATER / LAKE SURFACE ==================== -->
+  <rect x="0" y="272" width="850" height="28" fill="url(#waterGrad)" opacity="0.5"/>
+  <!-- Water ripple lines -->
+  <path d="M50 282 Q75 280, 100 282 Q125 284, 150 282" stroke="#7eb8c9" stroke-width="0.3" fill="none" opacity="0.15"/>
+  <path d="M300 286 Q330 284, 360 286 Q390 288, 420 286" stroke="#7eb8c9" stroke-width="0.3" fill="none" opacity="0.12"/>
+  <path d="M600 284 Q630 282, 660 284 Q690 286, 720 284" stroke="#7eb8c9" stroke-width="0.3" fill="none" opacity="0.1"/>
+  <path d="M180 290 Q200 288, 220 290" stroke="#7eb8c9" stroke-width="0.2" fill="none" opacity="0.1"/>
+  <path d="M500 292 Q525 290, 550 292" stroke="#7eb8c9" stroke-width="0.2" fill="none" opacity="0.08"/>
+
+  <!-- ==================== CLOUD LAYERS (云雾) ==================== -->
+  <!-- Cloud layer 1 - upper -->
+  <g class="cloud1">
+    <ellipse cx="150" cy="110" rx="120" ry="18" fill="url(#cloudGrad)" opacity="0.6"/>
+    <ellipse cx="200" cy="105" rx="80" ry="12" fill="#7eb8c9" opacity="0.06"/>
+  </g>
+
+  <!-- Cloud layer 2 - mid -->
+  <g class="cloud2">
+    <ellipse cx="550" cy="140" rx="150" ry="22" fill="url(#cloudGrad2)" opacity="0.5"/>
+    <ellipse cx="500" cy="135" rx="90" ry="14" fill="#7eb8c9" opacity="0.05"/>
+  </g>
+
+  <!-- Cloud layer 3 - lower -->
+  <g class="cloud3">
+    <ellipse cx="350" cy="195" rx="130" ry="16" fill="url(#cloudGrad)" opacity="0.4"/>
+    <ellipse cx="380" cy="200" rx="100" ry="10" fill="#7eb8c9" opacity="0.04"/>
+  </g>
+
+  <!-- Rising mist -->
+  <g class="mist">
+    <ellipse cx="100" cy="250" rx="80" ry="15" fill="#7eb8c9" opacity="0.08"/>
+  </g>
+  <g class="mist" style="animation-delay: 3s">
+    <ellipse cx="700" cy="240" rx="100" ry="12" fill="#7eb8c9" opacity="0.06"/>
+  </g>
+
+  <!-- ==================== CRANES (仙鹤) ==================== -->
+  <!-- Crane 1 -->
+  <g class="crane1" opacity="0.7">
+    <g transform="translate(100, 80)">
+      <!-- Body -->
+      <ellipse cx="0" cy="0" rx="5" ry="2" fill="#d4d4d4"/>
+      <!-- Wings -->
+      <path d="M-3 0 C-6 -5, -10 -8, -14 -6" stroke="#d4d4d4" stroke-width="0.8" fill="none" class="crane-wing"/>
+      <path d="M3 0 C6 -4, 10 -7, 13 -5" stroke="#d4d4d4" stroke-width="0.8" fill="none" class="crane-wing"/>
+      <!-- Head/neck -->
+      <path d="M5 -1 C7 -3, 8 -5, 9 -5" stroke="#d4d4d4" stroke-width="0.6" fill="none"/>
+      <circle cx="9.5" cy="-5.5" r="0.8" fill="#c94043"/>
+      <!-- Tail feathers -->
+      <path d="M-5 1 C-7 2, -8 3, -9 2" stroke="#222" stroke-width="0.5" fill="none"/>
+    </g>
+  </g>
+
+  <!-- Crane 2 -->
+  <g class="crane2" opacity="0.5">
+    <g transform="translate(180, 95) scale(0.8)">
+      <ellipse cx="0" cy="0" rx="5" ry="2" fill="#c8c8c8"/>
+      <path d="M-3 0 C-6 -5, -10 -7, -13 -5" stroke="#c8c8c8" stroke-width="0.7" fill="none" class="crane-wing"/>
+      <path d="M3 0 C6 -4, 9 -6, 12 -4" stroke="#c8c8c8" stroke-width="0.7" fill="none" class="crane-wing"/>
+      <path d="M5 -1 C7 -3, 8 -4, 9 -4" stroke="#c8c8c8" stroke-width="0.5" fill="none"/>
+      <circle cx="9.5" cy="-4.5" r="0.6" fill="#c94043"/>
+    </g>
+  </g>
+
+  <!-- ==================== SWORD QI (剑气光芒) ==================== -->
+  <line x1="580" y1="60" x2="750" y2="130" stroke="url(#swordGlow)" stroke-width="1.5" class="sword-qi" opacity="0.6"/>
+  <line x1="620" y1="45" x2="780" y2="110" stroke="url(#swordGlow)" stroke-width="1" class="sword-qi2" opacity="0.4"/>
+  <line x1="60" y1="140" x2="200" y2="90" stroke="url(#swordGlow2)" stroke-width="1.2" class="sword-qi" style="animation-delay:2s" opacity="0.35"/>
+
+  <!-- ==================== FLOATING PETALS (花瓣) ==================== -->
+  <g class="petal" style="animation-delay: 0s" opacity="0.6">
+    <ellipse cx="650" cy="60" rx="2.5" ry="1.2" fill="#c94043" transform="rotate(30 650 60)"/>
+  </g>
+  <g class="petal" style="animation-delay: 3s" opacity="0.5">
+    <ellipse cx="100" cy="90" rx="2" ry="1" fill="#c94043" transform="rotate(-20 100 90)"/>
+  </g>
+  <g class="petal" style="animation-delay: 6s" opacity="0.4">
+    <ellipse cx="400" cy="50" rx="2.2" ry="1.1" fill="#c94043" transform="rotate(45 400 50)"/>
+  </g>
+  <g class="petal" style="animation-delay: 1.5s" opacity="0.5">
+    <ellipse cx="300" cy="75" rx="1.8" ry="0.9" fill="#e8606a" transform="rotate(15 300 75)"/>
+  </g>
+  <g class="petal" style="animation-delay: 4.5s" opacity="0.35">
+    <ellipse cx="750" cy="85" rx="2" ry="1" fill="#c94043" transform="rotate(-35 750 85)"/>
+  </g>
+
+  <!-- ==================== DECORATIVE ELEMENTS ==================== -->
+  <!-- Taiji / Yin-Yang hint (subtle) -->
+  <circle cx="42" cy="150" r="12" stroke="#ffd700" stroke-width="0.3" fill="none" opacity="0.15" class="glow-soft"/>
+  <circle cx="808" cy="150" r="12" stroke="#ffd700" stroke-width="0.3" fill="none" opacity="0.15" class="glow-soft" style="animation-delay:3s"/>
+
+  <!-- Corner decorative brackets -->
+  <path d="M15 15 L15 35 M15 15 L35 15" stroke="#ffd700" stroke-width="0.8" fill="none" opacity="0.25"/>
+  <path d="M835 15 L835 35 M835 15 L815 15" stroke="#ffd700" stroke-width="0.8" fill="none" opacity="0.25"/>
+  <path d="M15 285 L15 265 M15 285 L35 285" stroke="#ffd700" stroke-width="0.8" fill="none" opacity="0.25"/>
+  <path d="M835 285 L835 265 M835 285 L815 285" stroke="#ffd700" stroke-width="0.8" fill="none" opacity="0.25"/>
+
+  <!-- Thin border frame -->
+  <rect x="10" y="10" width="830" height="280" rx="2" ry="2" stroke="#ffd700" stroke-width="0.4" fill="none" opacity="0.12"/>
+
+  <!-- ==================== TITLE: "Daily-AC" ==================== -->
+  <g class="title-glow">
+    <!-- Shadow layer -->
+    <text x="425" y="130" text-anchor="middle"
+      font-family="Georgia, 'Times New Roman', 'Noto Serif SC', 'Source Han Serif SC', 'SimSun', serif"
+      font-size="58" font-weight="bold" font-style="italic"
+      fill="#000" opacity="0.4"
+      letter-spacing="6"
+      transform="translate(2,2)">
+      Daily-AC
+    </text>
+    <!-- Main text -->
+    <text x="425" y="130" text-anchor="middle"
+      font-family="Georgia, 'Times New Roman', 'Noto Serif SC', 'Source Han Serif SC', 'SimSun', serif"
+      font-size="58" font-weight="bold" font-style="italic"
+      fill="#ffd700"
+      letter-spacing="6">
+      Daily-AC
+    </text>
+  </g>
+
+  <!-- Decorative line under title -->
+  <line x1="310" y1="142" x2="540" y2="142" stroke="#ffd700" stroke-width="0.6" opacity="0.3"/>
+  <circle cx="425" cy="142" r="2" fill="#ffd700" opacity="0.4"/>
+  <circle cx="310" cy="142" r="1.2" fill="#c94043" opacity="0.4"/>
+  <circle cx="540" cy="142" r="1.2" fill="#c94043" opacity="0.4"/>
+
+  <!-- ==================== SUBTITLE ==================== -->
+  <text x="425" y="170" text-anchor="middle"
+    font-family="'Noto Serif SC', 'Source Han Serif SC', 'KaiTi', 'STKaiti', 'SimSun', serif"
+    font-size="16" fill="#7eb8c9" opacity="0.8"
+    letter-spacing="8">
+    御剑乘风来，除魔天地间
+  </text>
+
+  <!-- ==================== SMALL TAGLINE ==================== -->
+  <text x="425" y="198" text-anchor="middle"
+    font-family="'Courier New', 'Consolas', monospace"
+    font-size="10" fill="#7eb8c9" opacity="0.35"
+    letter-spacing="3">
+    Competitive Programming · Algorithm · Code
+  </text>
+
+  <!-- ==================== EXTRA GLOW PARTICLES ==================== -->
+  <circle cx="340" cy="120" r="1.5" fill="#ffd700" opacity="0.3" class="star" style="animation-delay:0.5s"/>
+  <circle cx="510" cy="125" r="1.5" fill="#ffd700" opacity="0.3" class="star" style="animation-delay:1s"/>
+  <circle cx="375" cy="145" r="1" fill="#ffd700" opacity="0.2" class="star2" style="animation-delay:2s"/>
+  <circle cx="475" cy="145" r="1" fill="#ffd700" opacity="0.2" class="star2" style="animation-delay:2.5s"/>
+  <circle cx="425" cy="108" r="1.8" fill="#ffd700" opacity="0.2" class="star2" style="animation-delay:0.8s"/>
+
+  <!-- Title flanking sparkles -->
+  <circle cx="290" cy="120" r="2" fill="#ffd700" opacity="0.25" class="glow"/>
+  <circle cx="560" cy="120" r="2" fill="#ffd700" opacity="0.25" class="glow" style="animation-delay:2s"/>
+
+  <!-- Large ambient glow spots -->
+  <circle cx="425" cy="140" r="80" fill="#ffd700" opacity="0.02" class="glow-soft"/>
+  <circle cx="700" cy="70" r="60" fill="#ffeebb" opacity="0.03" class="glow-soft" style="animation-delay:2s"/>
+</svg>
