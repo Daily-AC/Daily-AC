@@ -1,0 +1,190 @@
+<svg width="880" height="190" viewBox="0 0 880 190" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="fleet telemetry — signal, spectrum and orbit, rendered in pure SVG">
+  <style>
+    .mono { font-family: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace; }
+    .lbl { font-size: 10px; fill: #58636F; letter-spacing: 0.8px; }
+    .ttl { font-size: 11.5px; fill: #7D8590; }
+    .trace { stroke-dasharray: 6 5; animation: flow 1.1s linear infinite; }
+    @keyframes flow { to { stroke-dashoffset: -22; } }
+    .scanline { animation: scanx 3.4s linear infinite; }
+    @keyframes scanx { from { transform: translateX(0); } to { transform: translateX(276px); } }
+    .bar { transform-box: fill-box; transform-origin: bottom; }
+    .b0{animation:eq0 1.38s ease-in-out 0.37s infinite alternate}@keyframes eq0{0%{transform:scaleY(0.45)}45%{transform:scaleY(0.99)}100%{transform:scaleY(0.35)}}
+    .b1{animation:eq1 1.49s ease-in-out 0.85s infinite alternate}@keyframes eq1{0%{transform:scaleY(0.60)}45%{transform:scaleY(0.89)}100%{transform:scaleY(0.23)}}
+    .b2{animation:eq2 1.49s ease-in-out 1.11s infinite alternate}@keyframes eq2{0%{transform:scaleY(0.35)}45%{transform:scaleY(0.69)}100%{transform:scaleY(0.21)}}
+    .b3{animation:eq3 1.06s ease-in-out 0.59s infinite alternate}@keyframes eq3{0%{transform:scaleY(0.30)}45%{transform:scaleY(0.72)}100%{transform:scaleY(0.17)}}
+    .b4{animation:eq4 1.76s ease-in-out 0.28s infinite alternate}@keyframes eq4{0%{transform:scaleY(0.34)}45%{transform:scaleY(0.66)}100%{transform:scaleY(0.28)}}
+    .b5{animation:eq5 1.68s ease-in-out 1.01s infinite alternate}@keyframes eq5{0%{transform:scaleY(0.39)}45%{transform:scaleY(0.68)}100%{transform:scaleY(0.24)}}
+    .b6{animation:eq6 1.13s ease-in-out 0.68s infinite alternate}@keyframes eq6{0%{transform:scaleY(0.56)}45%{transform:scaleY(0.88)}100%{transform:scaleY(0.24)}}
+    .b7{animation:eq7 1.88s ease-in-out 0.81s infinite alternate}@keyframes eq7{0%{transform:scaleY(0.52)}45%{transform:scaleY(0.96)}100%{transform:scaleY(0.39)}}
+    .b8{animation:eq8 1.78s ease-in-out 0.61s infinite alternate}@keyframes eq8{0%{transform:scaleY(0.53)}45%{transform:scaleY(0.77)}100%{transform:scaleY(0.39)}}
+    .b9{animation:eq9 1.40s ease-in-out 0.47s infinite alternate}@keyframes eq9{0%{transform:scaleY(0.38)}45%{transform:scaleY(0.83)}100%{transform:scaleY(0.32)}}
+    .b10{animation:eq10 0.91s ease-in-out 0.48s infinite alternate}@keyframes eq10{0%{transform:scaleY(0.49)}45%{transform:scaleY(0.97)}100%{transform:scaleY(0.44)}}
+    .b11{animation:eq11 1.29s ease-in-out 1.03s infinite alternate}@keyframes eq11{0%{transform:scaleY(0.44)}45%{transform:scaleY(0.83)}100%{transform:scaleY(0.23)}}
+    .b12{animation:eq12 1.77s ease-in-out 1.10s infinite alternate}@keyframes eq12{0%{transform:scaleY(0.56)}45%{transform:scaleY(0.96)}100%{transform:scaleY(0.43)}}
+    .b13{animation:eq13 1.35s ease-in-out 0.92s infinite alternate}@keyframes eq13{0%{transform:scaleY(0.58)}45%{transform:scaleY(0.74)}100%{transform:scaleY(0.27)}}
+    .b14{animation:eq14 1.03s ease-in-out 0.08s infinite alternate}@keyframes eq14{0%{transform:scaleY(0.49)}45%{transform:scaleY(0.74)}100%{transform:scaleY(0.17)}}
+    .b15{animation:eq15 1.85s ease-in-out 0.18s infinite alternate}@keyframes eq15{0%{transform:scaleY(0.25)}45%{transform:scaleY(0.73)}100%{transform:scaleY(0.24)}}
+    .b16{animation:eq16 1.44s ease-in-out 0.41s infinite alternate}@keyframes eq16{0%{transform:scaleY(0.56)}45%{transform:scaleY(0.96)}100%{transform:scaleY(0.30)}}
+    .b17{animation:eq17 1.77s ease-in-out 1.04s infinite alternate}@keyframes eq17{0%{transform:scaleY(0.35)}45%{transform:scaleY(0.60)}100%{transform:scaleY(0.44)}}
+    .b18{animation:eq18 0.97s ease-in-out 0.73s infinite alternate}@keyframes eq18{0%{transform:scaleY(0.47)}45%{transform:scaleY(0.58)}100%{transform:scaleY(0.36)}}
+    .b19{animation:eq19 1.82s ease-in-out 0.94s infinite alternate}@keyframes eq19{0%{transform:scaleY(0.59)}45%{transform:scaleY(0.96)}100%{transform:scaleY(0.28)}}
+    .b20{animation:eq20 1.57s ease-in-out 0.37s infinite alternate}@keyframes eq20{0%{transform:scaleY(0.55)}45%{transform:scaleY(0.95)}100%{transform:scaleY(0.23)}}
+    .b21{animation:eq21 1.60s ease-in-out 0.29s infinite alternate}@keyframes eq21{0%{transform:scaleY(0.41)}45%{transform:scaleY(0.61)}100%{transform:scaleY(0.39)}}
+    .st { opacity: 0.15; }
+    @keyframes tw { from { opacity: 0.08; } to { opacity: 0.65; } }
+    .s0{animation:tw 4.6s ease-in-out 3.3s infinite alternate}
+  .s1{animation:tw 5.6s ease-in-out 2.3s infinite alternate}
+  .s2{animation:tw 3.2s ease-in-out 1.6s infinite alternate}
+  .s3{animation:tw 5.8s ease-in-out 0.2s infinite alternate}
+  .s4{animation:tw 5.1s ease-in-out 3.9s infinite alternate}
+  .s5{animation:tw 5.0s ease-in-out 1.8s infinite alternate}
+  .s6{animation:tw 4.0s ease-in-out 0.6s infinite alternate}
+  .s7{animation:tw 5.1s ease-in-out 1.9s infinite alternate}
+  .s8{animation:tw 4.3s ease-in-out 2.3s infinite alternate}
+  .s9{animation:tw 5.0s ease-in-out 2.1s infinite alternate}
+  .s10{animation:tw 3.6s ease-in-out 0.5s infinite alternate}
+  .s11{animation:tw 5.9s ease-in-out 0.2s infinite alternate}
+  .s12{animation:tw 4.6s ease-in-out 1.0s infinite alternate}
+  .s13{animation:tw 3.0s ease-in-out 1.3s infinite alternate}
+  .s14{animation:tw 5.2s ease-in-out 1.7s infinite alternate}
+  .s15{animation:tw 5.4s ease-in-out 3.8s infinite alternate}
+  .s16{animation:tw 4.7s ease-in-out 1.6s infinite alternate}
+  .s17{animation:tw 3.1s ease-in-out 3.7s infinite alternate}
+  .s18{animation:tw 5.6s ease-in-out 1.7s infinite alternate}
+  .s19{animation:tw 2.9s ease-in-out 1.1s infinite alternate}
+  .s20{animation:tw 2.8s ease-in-out 3.3s infinite alternate}
+  .s21{animation:tw 5.9s ease-in-out 3.6s infinite alternate}
+  .s22{animation:tw 3.8s ease-in-out 3.1s infinite alternate}
+  .s23{animation:tw 2.7s ease-in-out 0.6s infinite alternate}
+  .s24{animation:tw 5.6s ease-in-out 2.6s infinite alternate}
+  .s25{animation:tw 3.7s ease-in-out 3.3s infinite alternate}
+    .rec { animation: blink 1.2s steps(1) infinite; }
+    @keyframes blink { 0%,55% { opacity: 1; } 56%,100% { opacity: 0.15; } }
+    .mer1 { animation: none; }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .smil { display: none; } }
+  </style>
+
+  <rect x="0.5" y="0.5" width="879" height="189" rx="10" fill="#0A0D12"/>
+
+  <!-- nebula -->
+  <defs>
+    <filter id="neb" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.011 0.017" numOctaves="2" seed="7">
+        <animate class="smil" attributeName="baseFrequency" values="0.011 0.017;0.014 0.020;0.011 0.017" dur="26s" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.96  0 0 0 0 0.65  0 0 0 0 0.23  0 0 0 0.055 0"/>
+    </filter>
+    <clipPath id="panel"><rect x="0.5" y="0.5" width="879" height="189" rx="10"/></clipPath>
+    <clipPath id="waveclip"><rect x="20" y="46" width="276" height="124"/></clipPath>
+  </defs>
+  <g clip-path="url(#panel)">
+    <rect x="0" y="26" width="880" height="164" filter="url(#neb)"/>
+    <circle class="st s0" cx="357" cy="44" r="1.0" fill="#E6EDF3"/>
+    <circle class="st s1" cx="843" cy="125" r="1.1" fill="#E6EDF3"/>
+    <circle class="st s2" cx="707" cy="86" r="1.4" fill="#E6EDF3"/>
+    <circle class="st s3" cx="208" cy="89" r="1.2" fill="#E6EDF3"/>
+    <circle class="st s4" cx="510" cy="66" r="1.4" fill="#E6EDF3"/>
+    <circle class="st s5" cx="838" cy="129" r="0.9" fill="#E6EDF3"/>
+    <circle class="st s6" cx="239" cy="50" r="1.4" fill="#E6EDF3"/>
+    <circle class="st s7" cx="201" cy="54" r="0.7" fill="#E6EDF3"/>
+    <circle class="st s8" cx="270" cy="82" r="0.9" fill="#E6EDF3"/>
+    <circle class="st s9" cx="73" cy="95" r="1.4" fill="#E6EDF3"/>
+    <circle class="st s10" cx="354" cy="81" r="0.8" fill="#E6EDF3"/>
+    <circle class="st s11" cx="42" cy="52" r="1.5" fill="#E6EDF3"/>
+    <circle class="st s12" cx="314" cy="51" r="1.0" fill="#E6EDF3"/>
+    <circle class="st s13" cx="393" cy="60" r="1.1" fill="#E6EDF3"/>
+    <circle class="st s14" cx="366" cy="74" r="1.1" fill="#E6EDF3"/>
+    <circle class="st s15" cx="738" cy="59" r="1.3" fill="#E6EDF3"/>
+    <circle class="st s16" cx="603" cy="80" r="1.3" fill="#E6EDF3"/>
+    <circle class="st s17" cx="526" cy="41" r="0.7" fill="#E6EDF3"/>
+    <circle class="st s18" cx="29" cy="71" r="1.3" fill="#E6EDF3"/>
+    <circle class="st s19" cx="446" cy="166" r="0.9" fill="#E6EDF3"/>
+    <circle class="st s20" cx="632" cy="82" r="1.2" fill="#E6EDF3"/>
+    <circle class="st s21" cx="835" cy="165" r="0.8" fill="#E6EDF3"/>
+    <circle class="st s22" cx="205" cy="95" r="0.8" fill="#E6EDF3"/>
+    <circle class="st s23" cx="91" cy="130" r="1.3" fill="#E6EDF3"/>
+    <circle class="st s24" cx="681" cy="153" r="0.9" fill="#E6EDF3"/>
+    <circle class="st s25" cx="23" cy="141" r="0.8" fill="#E6EDF3"/>
+  </g>
+
+  <!-- title bar -->
+  <line x1="1" y1="26.5" x2="879" y2="26.5" stroke="#161C25"/>
+  <text class="mono ttl" x="16" y="18"><tspan fill="#F5A63B">$</tspan> fleet telemetry --watch</text>
+  <text class="mono ttl" x="862" y="18" text-anchor="end"><tspan class="rec" fill="#F5A63B">●</tspan> rec</text>
+
+  <!-- ══ waveform ══ -->
+  <g clip-path="url(#waveclip)">
+    <line x1="20" y1="52" x2="20" y2="164" stroke="#161C25" stroke-width="1"/>
+    <line x1="54" y1="52" x2="54" y2="164" stroke="#161C25" stroke-width="1"/>
+    <line x1="88" y1="52" x2="88" y2="164" stroke="#161C25" stroke-width="1"/>
+    <line x1="122" y1="52" x2="122" y2="164" stroke="#161C25" stroke-width="1"/>
+    <line x1="156" y1="52" x2="156" y2="164" stroke="#161C25" stroke-width="1"/>
+    <line x1="190" y1="52" x2="190" y2="164" stroke="#161C25" stroke-width="1"/>
+    <line x1="224" y1="52" x2="224" y2="164" stroke="#161C25" stroke-width="1"/>
+    <line x1="258" y1="52" x2="258" y2="164" stroke="#161C25" stroke-width="1"/>
+    <line x1="292" y1="52" x2="292" y2="164" stroke="#161C25" stroke-width="1"/>
+    <line x1="20" y1="52" x2="296" y2="52" stroke="#161C25" stroke-width="1"/>
+    <line x1="20" y1="80" x2="296" y2="80" stroke="#161C25" stroke-width="1"/>
+    <line x1="20" y1="108" x2="296" y2="108" stroke="#161C25" stroke-width="1"/>
+    <line x1="20" y1="136" x2="296" y2="136" stroke="#161C25" stroke-width="1"/>
+    <line x1="20" y1="164" x2="296" y2="164" stroke="#161C25" stroke-width="1"/>
+    <polyline points="20.0,113.9 22.0,115.4 24.0,115.7 26.0,115.0 28.0,113.4 30.0,111.1 32.0,108.5 34.0,106.1 36.0,104.1 38.0,103.0 40.0,102.8 42.0,103.5 44.0,105.0 46.0,107.0 48.0,109.2 50.0,111.0 52.0,112.1 54.0,112.4 56.0,111.5 58.0,109.5 60.0,106.6 62.0,103.2 64.0,99.5 66.0,96.0 68.0,93.1 70.0,91.1 72.0,90.2 74.0,90.5 76.0,91.7 78.0,93.6 80.0,95.8 82.0,98.0 84.0,99.7 86.0,100.7 88.0,100.7 90.0,99.9 92.0,98.3 94.0,96.3 96.0,94.2 98.0,92.4 100.0,91.3 102.0,91.2 104.0,92.3 106.0,94.5 108.0,97.7 110.0,101.6 112.0,105.8 114.0,109.9 116.0,113.5 118.0,116.2 120.0,117.9 122.0,118.6 124.0,118.3 126.0,117.3 128.0,116.1 130.0,114.9 132.0,114.2 134.0,114.2 136.0,115.1 138.0,117.0 140.0,119.6 142.0,122.7 144.0,125.9 146.0,128.8 148.0,131.0 150.0,132.1 152.0,132.1 154.0,130.9 156.0,128.7 158.0,125.6 160.0,122.2 162.0,118.7 164.0,115.7 166.0,113.5 168.0,112.1 170.0,111.8 172.0,112.3 174.0,113.4 176.0,114.8 178.0,116.1 180.0,116.8 182.0,116.8 184.0,115.7 186.0,113.7 188.0,110.8 190.0,107.3 192.0,103.6 194.0,100.2 196.0,97.4 198.0,95.5 200.0,94.7 202.0,95.1 204.0,96.6 206.0,98.8 208.0,101.5 210.0,104.1 212.0,106.4 214.0,107.9 216.0,108.5 218.0,108.1 220.0,106.8 222.0,104.9 224.0,102.7 226.0,100.7 228.0,99.2 230.0,98.5 232.0,98.8 234.0,100.1 236.0,102.3 238.0,105.1 240.0,108.2 242.0,111.2 244.0,113.5 246.0,115.0 248.0,115.4 250.0,114.6 252.0,112.8 254.0,110.2 256.0,107.2 258.0,104.2 260.0,101.5 262.0,99.7 264.0,98.7 266.0,98.8 268.0,99.7 270.0,101.3 272.0,103.3 274.0,105.1 276.0,106.4 278.0,107.0 280.0,106.6 282.0,105.2 284.0,102.9 286.0,100.0 288.0,96.8 290.0,93.8 292.0,91.3 294.0,89.8 296.0,89.4" stroke="#4CC38A" stroke-width="1.2" opacity="0.4" class="trace"/>
+    <polyline points="20.0,108.0 22.0,114.7 24.0,120.2 26.0,123.7 28.0,125.2 30.0,125.2 32.0,124.7 34.0,124.8 36.0,125.9 38.0,127.8 40.0,129.6 42.0,130.5 44.0,129.8 46.0,127.4 48.0,124.0 50.0,120.8 52.0,118.8 54.0,119.0 56.0,121.3 58.0,125.0 60.0,129.0 62.0,132.0 64.0,133.4 66.0,133.1 68.0,131.8 70.0,130.3 72.0,129.5 74.0,129.7 76.0,130.3 78.0,130.5 80.0,129.2 82.0,125.6 84.0,119.9 86.0,112.7 88.0,105.3 90.0,99.0 92.0,94.7 94.0,92.4 96.0,91.7 98.0,91.5 100.0,90.9 102.0,89.4 104.0,87.2 106.0,85.0 108.0,83.8 110.0,84.3 112.0,86.6 114.0,90.0 116.0,93.6 118.0,95.9 120.0,96.2 122.0,94.3 124.0,91.0 126.0,87.3 128.0,84.3 130.0,82.9 132.0,83.1 134.0,84.4 136.0,85.7 138.0,86.3 140.0,86.0 142.0,85.0 144.0,84.4 146.0,85.2 148.0,88.1 150.0,93.2 152.0,99.9 154.0,106.9 156.0,112.9 158.0,117.1 160.0,119.2 162.0,119.6 164.0,119.5 166.0,119.6 168.0,120.6 170.0,122.4 172.0,124.2 174.0,125.0 176.0,124.1 178.0,121.4 180.0,117.4 182.0,113.3 184.0,110.3 186.0,109.3 188.0,110.5 190.0,113.4 192.0,116.9 194.0,119.8 196.0,121.4 198.0,121.5 200.0,120.7 202.0,119.8 204.0,119.8 206.0,120.9 208.0,122.7 210.0,124.5 212.0,125.0 214.0,123.4 216.0,119.7 218.0,114.3 220.0,108.5 222.0,103.5 224.0,100.4 226.0,99.3 228.0,99.9 230.0,101.2 232.0,102.2 234.0,102.4 236.0,101.8 238.0,101.0 240.0,101.2 242.0,103.0 244.0,106.6 246.0,111.6 248.0,116.7 250.0,120.8 252.0,122.8 254.0,122.4 256.0,120.2 258.0,117.1 260.0,114.3 262.0,112.7 264.0,112.3 266.0,112.8 268.0,113.1 270.0,112.5 272.0,110.6 274.0,107.8 276.0,104.8 278.0,102.9 280.0,102.9 282.0,105.0 284.0,108.9 286.0,113.2 288.0,116.9 290.0,118.8 292.0,118.6 294.0,116.8 296.0,114.2" stroke="#F5A63B" stroke-width="1.6" class="trace"/>
+    <g class="scanline"><line x1="20" y1="48" x2="20" y2="168" stroke="#E6EDF3" stroke-width="1" opacity="0.28"/></g>
+  </g>
+  <text class="mono lbl" x="20" y="42">relay / signal</text>
+
+  <line x1="308" y1="36" x2="308" y2="178" stroke="#161C25"/>
+
+  <!-- ══ spectrum ══ -->
+  <text class="mono lbl" x="322" y="42">spectrum</text>
+  <rect class="bar b0" x="322.0" y="119.0" width="8" height="45.0" fill="#F5A63B"/>
+    <rect class="bar b1" x="333.6" y="112.2" width="8" height="51.8" fill="#F5A63B"/>
+    <rect class="bar b2" x="345.2" y="94.3" width="8" height="69.7" fill="#F5A63B"/>
+    <rect class="bar b3" x="356.8" y="89.0" width="8" height="75.0" fill="#F5A63B"/>
+    <rect class="bar b4" x="368.4" y="94.5" width="8" height="69.5" fill="#F5A63B"/>
+    <rect class="bar b5" x="380.0" y="79.0" width="8" height="85.0" fill="#F5A63B"/>
+    <rect class="bar b6" x="391.6" y="71.1" width="8" height="92.9" fill="#F5A63B"/>
+    <rect class="bar b7" x="403.2" y="70.6" width="8" height="93.4" fill="#F5A63B"/>
+    <rect class="bar b8" x="414.8" y="65.5" width="8" height="98.5" fill="#F5A63B"/>
+    <rect class="bar b9" x="426.4" y="73.8" width="8" height="90.2" fill="#F5A63B"/>
+    <rect class="bar b10" x="438.0" y="60.7" width="8" height="103.3" fill="#F5A63B"/>
+    <rect class="bar b11" x="449.6" y="60.6" width="8" height="103.4" fill="#F5A63B"/>
+    <rect class="bar b12" x="461.2" y="63.8" width="8" height="100.2" fill="#F5A63B"/>
+    <rect class="bar b13" x="472.8" y="59.1" width="8" height="104.9" fill="#F5A63B"/>
+    <rect class="bar b14" x="484.4" y="60.2" width="8" height="103.8" fill="#F5A63B"/>
+    <rect class="bar b15" x="496.0" y="86.5" width="8" height="77.5" fill="#F5A63B"/>
+    <rect class="bar b16" x="507.6" y="91.6" width="8" height="72.4" fill="#F5A63B"/>
+    <rect class="bar b17" x="519.2" y="89.3" width="8" height="74.7" fill="#F5A63B"/>
+    <rect class="bar b18" x="530.8" y="99.7" width="8" height="64.3" fill="#F5A63B"/>
+    <rect class="bar b19" x="542.4" y="105.4" width="8" height="58.6" fill="#F5A63B"/>
+    <rect class="bar b20" x="554.0" y="111.8" width="8" height="52.2" fill="#F5A63B"/>
+    <rect class="bar b21" x="565.6" y="120.4" width="8" height="43.6" fill="#F5A63B"/>
+  <line x1="320" y1="164.5" x2="578" y2="164.5" stroke="#2A3340"/>
+
+  <line x1="588" y1="36" x2="588" y2="178" stroke="#161C25"/>
+
+  <!-- ══ orbit ══ -->
+  <text class="mono lbl" x="604" y="42">fleet / orbit</text>
+  <g stroke="#39434F" fill="none">
+    <circle cx="726" cy="112" r="47" stroke-width="1.3"/>
+    <ellipse cx="726" cy="112" rx="47" ry="16"/>
+    <ellipse cx="726" cy="96"  rx="41" ry="10" opacity="0.6"/>
+    <ellipse cx="726" cy="128" rx="41" ry="10" opacity="0.6"/>
+    <ellipse cx="726" cy="112" rx="47" ry="47">
+      <animate class="smil" attributeName="rx" values="47;2;47" dur="6s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="726" cy="112" rx="24" ry="47" opacity="0.7">
+      <animate class="smil" attributeName="rx" values="2;47;2" dur="6s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+  <ellipse cx="726" cy="112" rx="74" ry="26" stroke="#2A3340" stroke-dasharray="2 6" fill="none" transform="rotate(-16 726 112)"/>
+  <g class="smil" transform="rotate(-16 726 112)">
+    <circle r="3.2" fill="#4CC38A">
+      <animateMotion dur="7s" repeatCount="indefinite" path="M 726,86 a 74,26 0 1,0 0.001,0" rotate="0"/>
+    </circle>
+  </g>
+  <text class="mono lbl" x="856" y="174" text-anchor="end" fill="#39434F">sat-01 · lock</text>
+
+  <rect x="0.5" y="0.5" width="879" height="189" rx="10" stroke="#1C232E"/>
+</svg>

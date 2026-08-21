@@ -1,0 +1,129 @@
+<svg width="880" height="210" viewBox="0 0 880 210" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="access granted — nothing of value here, the real work ships in daylight. curiosity acknowledged, operator.">
+  <style>
+    .mono { font-family: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace; }
+    .big { font-size: 27px; font-weight: 700; letter-spacing: 6px; fill: #E6EDF3; }
+    .sub { font-size: 12px; fill: #8B949E; }
+    .dim { fill: #58636F; }
+    .hex { font-size: 10px; fill: #232C38; }
+
+    .gate { transform: scaleX(0); transform-origin: 0 0; animation: gate 0.9s steps(24) 0.2s both; }
+    @keyframes gate { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    .rev  { animation: appear 0.15s linear 1.25s both; }
+    .rev2 { animation: appear 0.15s linear 1.7s both; }
+    .rev3 { animation: appear 0.15s linear 2.1s both; }
+    @keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+
+    .gl { opacity: 0; }
+    .gl1 { animation: glitch 5s steps(1) 2.6s infinite; }
+    .gl2 { animation: glitch 5s steps(1) 2.64s infinite; }
+    @keyframes glitch { 0%,30.9%,32.6%,33.4%,34.6%,100% { opacity: 0; } 31%,32.5% { opacity: 0.6; } 33.5%,34.5% { opacity: 0.35; } }
+
+    .scrollcol { animation: colup 12s linear infinite; }
+    @keyframes colup { from { transform: translateY(0); } to { transform: translateY(-224px); } }
+
+    .cursor { animation: appear 0.1s linear 2.3s both, blink 1.1s steps(1) 2.4s infinite; }
+    @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }
+
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+
+  <defs>
+    <clipPath id="vpanel"><rect x="0.5" y="0.5" width="879" height="209" rx="10"/></clipPath>
+    <clipPath id="vbar"><rect class="gate" x="240" y="52" width="400" height="8"/></clipPath>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="879" height="209" rx="10" fill="#0A0D12"/>
+
+  <g clip-path="url(#vpanel)">
+    <g class="mono hex">
+      <g class="scrollcol">
+      <text x="24" y="20">9e1d 4bc5 ffc1</text>
+      <text x="24" y="34">63b0 8e7d 88c6</text>
+      <text x="24" y="48">ad98 2a68 2057</text>
+      <text x="24" y="62">8d37 e334 e0a8</text>
+      <text x="24" y="76">1ae0 f061 cb39</text>
+      <text x="24" y="90">323a 6c61 eb84</text>
+      <text x="24" y="104">907d fe70 bdb2</text>
+      <text x="24" y="118">76b9 8632 3b6a</text>
+      <text x="24" y="132">4bb8 0f84 3b2c</text>
+      <text x="24" y="146">07ae 322c c53d</text>
+      <text x="24" y="160">c59b 8a5f faa7</text>
+      <text x="24" y="174">1867 d10c c17d</text>
+      <text x="24" y="188">4add d621 f50b</text>
+      <text x="24" y="202">46b2 0e2e ffb1</text>
+      <text x="24" y="216">bc3c 1ad4 b703</text>
+      <text x="24" y="230">49c7 e571 3f1b</text>
+      <text x="24" y="244">fda0 4417 16d0</text>
+      <text x="24" y="258">ef44 286c 577a</text>
+      <text x="24" y="272">692a dcb9 2897</text>
+      <text x="24" y="286">e24a ebc2 aa27</text>
+      <text x="24" y="300">9f47 8ee8 26f8</text>
+      <text x="24" y="314">e21c b64f 9b64</text>
+      <text x="24" y="328">e594 ca0c 5ef0</text>
+      <text x="24" y="342">8aee fe96 7d11</text>
+      <text x="24" y="356">7dae db76 1bea</text>
+      <text x="24" y="370">0365 45b4 25f9</text>
+      <text x="24" y="384">4297 7ac4 2f9a</text>
+      <text x="24" y="398">2881 e1b0 3223</text>
+      <text x="24" y="412">bd76 ca74 19da</text>
+      <text x="24" y="426">132d 069e fc5f</text>
+      <text x="24" y="440">95d1 d6d7 e71a</text>
+      <text x="24" y="454">3a84 1b3a 1688</text>
+      </g>
+    </g>
+    <g class="mono hex">
+      <g class="scrollcol" style="animation-delay: -6s">
+      <text x="742" y="20">46ef 966c 6a6b</text>
+      <text x="742" y="34">975e 4f90 e52a</text>
+      <text x="742" y="48">f1c4 fb6f c319</text>
+      <text x="742" y="62">5ed8 9e23 8e4e</text>
+      <text x="742" y="76">8b4b 2079 8926</text>
+      <text x="742" y="90">ec0e 8c13 8010</text>
+      <text x="742" y="104">49e8 f79f 4616</text>
+      <text x="742" y="118">2ff6 6e35 3b4c</text>
+      <text x="742" y="132">3fab 8899 ded7</text>
+      <text x="742" y="146">5069 3765 68bb</text>
+      <text x="742" y="160">2ae6 71b3 4660</text>
+      <text x="742" y="174">84fa 61cb 5f76</text>
+      <text x="742" y="188">f279 bcb5 744f</text>
+      <text x="742" y="202">dc9f c895 2bbb</text>
+      <text x="742" y="216">c20b 5f01 dfc1</text>
+      <text x="742" y="230">ecb5 2e34 aac2</text>
+      <text x="742" y="244">f30d d3fc 221c</text>
+      <text x="742" y="258">1925 214e 8153</text>
+      <text x="742" y="272">14e7 17fe 82e2</text>
+      <text x="742" y="286">6e37 5a49 e2fd</text>
+      <text x="742" y="300">7216 f640 3348</text>
+      <text x="742" y="314">2163 9e6e fb4b</text>
+      <text x="742" y="328">993c e3e4 2f33</text>
+      <text x="742" y="342">24c4 587f fbda</text>
+      <text x="742" y="356">5758 a4a9 b1e2</text>
+      <text x="742" y="370">16e6 8798 3282</text>
+      <text x="742" y="384">2bc0 bb96 bd32</text>
+      <text x="742" y="398">701a 7acd 5f90</text>
+      <text x="742" y="412">9057 95b4 53d7</text>
+      <text x="742" y="426">ceb5 9134 8832</text>
+      <text x="742" y="440">dc97 514e 7060</text>
+      <text x="742" y="454">8aa1 e960 c0d8</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- unlock bar -->
+  <rect x="240" y="52" width="400" height="8" rx="4" stroke="#1C232E" fill="none"/>
+  <g clip-path="url(#vbar)"><rect x="240" y="52" width="400" height="8" rx="4" fill="#F5A63B"/></g>
+  <text class="mono sub dim" x="440" y="40" text-anchor="middle">breaking weak ciphers, please hold</text>
+
+  <g class="rev">
+    <text class="mono big gl gl1" x="438" y="106" text-anchor="middle" fill="#4CC38A">ACCESS GRANTED</text>
+    <text class="mono big gl gl2" x="442" y="106" text-anchor="middle" fill="#F5A63B">ACCESS GRANTED</text>
+    <text class="mono big" x="440" y="106" text-anchor="middle">ACCESS <tspan fill="#F5A63B">GRANTED</tspan></text>
+  </g>
+
+  <text class="mono sub rev2" x="440" y="140" text-anchor="middle"><tspan class="dim">intrusion logged · 03:14:15.926 · counter-trace:</tspan> disarmed</text>
+  <text class="mono sub rev3" x="440" y="162" text-anchor="middle">nothing of value in the vault — the real work ships in daylight.</text>
+  <text class="mono sub rev3" x="440" y="184" text-anchor="middle"><tspan class="dim">curiosity acknowledged, operator</tspan></text>
+  <rect class="cursor" x="558" y="174" width="7" height="12" fill="#F5A63B"/>
+
+  <rect x="0.5" y="0.5" width="879" height="209" rx="10" stroke="#1C232E"/>
+</svg>
