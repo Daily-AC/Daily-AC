@@ -1,9 +1,31 @@
-<svg width="880" height="56" viewBox="0 0 880 56" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="connection closed — the agents keep running">
+<svg width="880" height="92" viewBox="0 0 880 92" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="data stream — connection closed, the agents keep running">
   <style>
     .mono { font-family: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace; }
     .t { font-size: 12.5px; fill: #58636F; }
+    .stream { font-size: 11px; fill: #333D49; }
+    .hot { fill: #B98A44; }
+    .mv { animation: marquee 26s linear infinite; }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-1100px); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
   </style>
-  <line x1="16" y1="28.5" x2="212" y2="28.5" stroke="#1C232E"/>
-  <line x1="668" y1="28.5" x2="864" y2="28.5" stroke="#1C232E"/>
-  <text class="mono t" x="440" y="33" text-anchor="middle"><tspan fill="#F5A63B">$</tspan> exit <tspan fill="#333D49">·</tspan> connection closed — the agents keep running</text>
+  <defs>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.08" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="0.92" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="edge"><rect x="0" y="0" width="880" height="44" fill="url(#fade)"/></mask>
+  </defs>
+
+  <g mask="url(#edge)">
+    <g class="mv">
+      <text class="mono stream" x="0" y="30" textLength="1100" lengthAdjust="spacingAndGlyphs">7a31 30c0 ▸ <tspan class="hot">[relay]</tspan> ack 200 ▸ e8f2 4d09 ▸ φ = 1.6180339887 ▸ <tspan class="hot">[swarm]</tspan> sync ×6 ▸ e^(iπ) + 1 = 0 ▸ 5a6d 78f1 ▸ <tspan class="hot">[watchdog]</tspan> ping 4ms ▸ θ = 137.5077° ▸ c0ff ee00 ▸</text>
+      <text class="mono stream" x="1100" y="30" textLength="1100" lengthAdjust="spacingAndGlyphs">7a31 30c0 ▸ <tspan class="hot">[relay]</tspan> ack 200 ▸ e8f2 4d09 ▸ φ = 1.6180339887 ▸ <tspan class="hot">[swarm]</tspan> sync ×6 ▸ e^(iπ) + 1 = 0 ▸ 5a6d 78f1 ▸ <tspan class="hot">[watchdog]</tspan> ping 4ms ▸ θ = 137.5077° ▸ c0ff ee00 ▸</text>
+    </g>
+  </g>
+
+  <line x1="16" y1="64.5" x2="212" y2="64.5" stroke="#1C232E"/>
+  <line x1="668" y1="64.5" x2="864" y2="64.5" stroke="#1C232E"/>
+  <text class="mono t" x="440" y="69" text-anchor="middle"><tspan fill="#F5A63B">$</tspan> exit <tspan fill="#333D49">·</tspan> connection closed — the agents keep running</text>
 </svg>

@@ -6,9 +6,23 @@
     .lang { font-size: 11px; fill: #58636F; }
     .topics { font-size: 10.5px; fill: #B98A44; letter-spacing: 0.3px; }
     .idx { font-size: 10.5px; fill: #333D49; }
+    .led { animation: led 2.6s ease-in-out 0.9s infinite; }
+    @keyframes led { 0%,100% { opacity: 0.25; } 50% { opacity: 1; } }
+    .sheen { animation: sweep 9s linear 3s infinite; }
+    @keyframes sweep { 0% { transform: translateX(0); } 16% { transform: translateX(690px); } 100% { transform: translateX(690px); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .sheen { display: none; } }
   </style>
+  <defs>
+    <clipPath id="card"><rect x="0.5" y="0.5" width="431" height="131" rx="8"/></clipPath>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#E6EDF3" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#E6EDF3" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#E6EDF3" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
   <rect x="0.5" y="0.5" width="431" height="131" rx="8" fill="#0A0D12"/>
   <rect x="0.5" y="0.5" width="431" height="131" rx="8" stroke="#1C232E"/>
+  <g clip-path="url(#card)"><rect class="sheen" x="-190" y="-20" width="70" height="172" fill="url(#shine)" /></g>
   <path d="M0.5 22 L0.5 9 Q0.5 0.5 9 0.5 L22 0.5" stroke="#F5A63B" stroke-width="1.5" fill="none" opacity="0.9"/>
   <text class="mono name" x="22" y="36"><tspan fill="#F5A63B">&gt;</tspan> cfx</text>
   <circle cx="404" cy="31.5" r="4" fill="#00ADD8"/>
@@ -16,5 +30,6 @@
   <text class="mono desc" x="22" y="66">Codeforces training CLI for humans and coding</text>
   <text class="mono desc" x="22" y="84">agents — pull, test and submit from the terminal.</text>
   <text class="mono topics" x="22" y="112">competitive-programming · cli</text>
+  <circle class="led" cx="376" cy="108" r="2.6" fill="#4CC38A"/>
   <text class="mono idx" x="410" y="112" text-anchor="end">/03</text>
 </svg>

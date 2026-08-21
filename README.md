@@ -12,6 +12,14 @@
 <a href="https://github.com/Daily-AC/webai-cli"><img src="assets/card-webai-cli.svg" width="49%" alt="webai-cli — reverse-engineered CLI for web chat APIs" /></a>
 <a href="https://github.com/Daily-AC/lingyuan"><img src="assets/card-lingyuan.svg" width="49%" alt="lingyuan — a multiplayer sandbox survival world for LLM agents" /></a>
 
-<img src="assets/footer.svg" width="100%" alt="connection closed — the agents keep running" />
+<img src="assets/telemetry.svg" width="100%" alt="fleet telemetry — live signal, spectrum and orbit, drawn in pure SVG" />
+
+<img src="assets/footer.svg" width="100%" alt="data stream — connection closed, the agents keep running" />
+
+<details>
+<summary><sub><samp>$ ssh vault@daily-ac — permission denied · click to force entry</samp></sub></summary>
+<br/>
+<img src="assets/vault.svg" width="100%" alt="access granted — nothing of value in the vault, the real work ships in daylight. curiosity acknowledged, operator." />
+</details>
 
 </div>
