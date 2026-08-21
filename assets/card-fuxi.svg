@@ -1,0 +1,20 @@
+<svg width="432" height="132" viewBox="0 0 432 132" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="fuxi 伏羲 — Orchestration platform for a personal legion of AI agents, with A2A messaging. Written in Rust.">
+  <style>
+    .mono { font-family: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace; }
+    .name { font-size: 15px; font-weight: 600; fill: #E6EDF3; }
+    .desc { font-size: 12px; fill: #8B949E; }
+    .lang { font-size: 11px; fill: #58636F; }
+    .topics { font-size: 10.5px; fill: #B98A44; letter-spacing: 0.3px; }
+    .idx { font-size: 10.5px; fill: #333D49; }
+  </style>
+  <rect x="0.5" y="0.5" width="431" height="131" rx="8" fill="#0A0D12"/>
+  <rect x="0.5" y="0.5" width="431" height="131" rx="8" stroke="#1C232E"/>
+  <path d="M0.5 22 L0.5 9 Q0.5 0.5 9 0.5 L22 0.5" stroke="#F5A63B" stroke-width="1.5" fill="none" opacity="0.9"/>
+  <text class="mono name" x="22" y="36"><tspan fill="#F5A63B">&gt;</tspan> fuxi 伏羲</text>
+  <circle cx="404" cy="31.5" r="4" fill="#DEA584"/>
+  <text class="mono lang" x="394" y="36" text-anchor="end">Rust</text>
+  <text class="mono desc" x="22" y="66">Orchestration platform for a personal legion of</text>
+  <text class="mono desc" x="22" y="84">AI agents, with A2A messaging. Written in Rust.</text>
+  <text class="mono topics" x="22" y="112">agents · orchestration · a2a</text>
+  <text class="mono idx" x="410" y="112" text-anchor="end">/04</text>
+</svg>

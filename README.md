@@ -1,99 +1,17 @@
+<!-- handcrafted SVG, zero third-party widgets — assets/ is the whole design -->
 <div align="center">
 
-<!-- ██████████████████████████████████████████████████████ -->
-<!-- ░░░░░░░░░░░░░░░░  HEADER MODULE  ░░░░░░░░░░░░░░░░░░ -->
-<!-- ██████████████████████████████████████████████████████ -->
+<img src="assets/header.svg" width="100%" alt="e0_7 fleet console — I build tools and infrastructure for AI agents. ship small sharp tools, let agents do real work." />
 
-<img src="header.svg" width="100%" />
+<sub><samp>$ ls ~/ships --featured</samp></sub>
 
-<br/>
+<a href="https://github.com/Daily-AC/omnireach"><img src="assets/card-omnireach.svg" width="49%" alt="omnireach — search and read the login-walled Chinese internet for AI agents" /></a>
+<a href="https://github.com/Daily-AC/wanctl"><img src="assets/card-wanctl.svg" width="49%" alt="wanctl — cross-WAN remote device control for humans and AI agents" /></a>
+<a href="https://github.com/Daily-AC/cfx"><img src="assets/card-cfx.svg" width="49%" alt="cfx — Codeforces training CLI for humans and coding agents" /></a>
+<a href="https://github.com/Daily-AC/fuxi"><img src="assets/card-fuxi.svg" width="49%" alt="fuxi — orchestration platform for a personal legion of AI agents" /></a>
+<a href="https://github.com/Daily-AC/webai-cli"><img src="assets/card-webai-cli.svg" width="49%" alt="webai-cli — reverse-engineered CLI for web chat APIs" /></a>
+<a href="https://github.com/Daily-AC/lingyuan"><img src="assets/card-lingyuan.svg" width="49%" alt="lingyuan — a multiplayer sandbox survival world for LLM agents" /></a>
 
-<!-- NEURAL LINK INITIALIZATION -->
-
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=00F0FF&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=80&lines=Initializing+neural+link...;System+boot+complete.+Welcome%2C+Operator." alt="Typing SVG" /></a>
-
-<br/>
-
-```
-> ═══════════════════════════════════════════════════
-> SYSTEM_DIAGNOSTICS.load()
-> ═══════════════════════════════════════════════════
-```
-
-<!-- ██████████████████████████████████████████████████████ -->
-<!-- ░░░░░░░░░░░░░░  STATS MODULE  ░░░░░░░░░░░░░░░░░░░░░ -->
-<!-- ██████████████████████████████████████████████████████ -->
-
-<img src="https://github-readme-stats.vercel.app/api?username=Daily-AC&show_icons=true&hide_border=false&count_private=true&bg_color=0a0a0f&title_color=00f0ff&text_color=8b949e&icon_color=ff2d95&border_color=1a1a3e&ring_color=39ff14" height="180" />
-&nbsp;&nbsp;
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Daily-AC&layout=compact&langs_count=8&bg_color=0a0a0f&title_color=00f0ff&text_color=8b949e&icon_color=ff2d95&border_color=1a1a3e" height="180" />
-
-<br/><br/>
-
-<img src="https://streak-stats.demolab.com?user=Daily-AC&theme=black-ice&hide_border=false&border=1a1a3e&background=0a0a0f&ring=00f0ff&fire=ff2d95&currStreakLabel=39ff14&sideLabels=00f0ff&currStreakNum=00f0ff&sideNums=8b949e&dates=8b949e" />
-
-<br/>
-
-```
-> ═══════════════════════════════════════════════════
-> TECH_STACK.status()
-> ═══════════════════════════════════════════════════
-```
-
-<!-- ██████████████████████████████████████████████████████ -->
-<!-- ░░░░░░░░░░░░░░  SKILLS MODULE  ░░░░░░░░░░░░░░░░░░░░ -->
-<!-- ██████████████████████████████████████████████████████ -->
-
-<img src="skills.svg" width="100%" />
-
-<br/>
-
-```
-> ═══════════════════════════════════════════════════
-> NETWORK_SCAN.load()
-> ═══════════════════════════════════════════════════
-```
-
-<!-- ██████████████████████████████████████████████████████ -->
-<!-- ░░░░░░░░░░░░░  METRICS MODULE  ░░░░░░░░░░░░░░░░░░░░ -->
-<!-- ██████████████████████████████████████████████████████ -->
-
-<img src="github-metrics.svg" width="100%" />
-
-<br/>
-
-```
-> ═══════════════════════════════════════════════════
-> TRACE_LOG.load()
-> ═══════════════════════════════════════════════════
-```
-
-<!-- ██████████████████████████████████████████████████████ -->
-<!-- ░░░░░░░░░░░░  SNAKE MODULE  ░░░░░░░░░░░░░░░░░░░░░░░ -->
-<!-- ██████████████████████████████████████████████████████ -->
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Daily-AC/Daily-AC/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Daily-AC/Daily-AC/output/github-snake.svg" />
-  <img alt="github-snake" src="https://raw.githubusercontent.com/Daily-AC/Daily-AC/output/github-snake-dark.svg" width="100%" />
-</picture>
-
-<br/>
-
-```
-> ═══════════════════════════════════════════════════
-> SESSION_END.shutdown()
-> ═══════════════════════════════════════════════════
-```
-
-<!-- ██████████████████████████████████████████████████████ -->
-<!-- ░░░░░░░░░░░░░  FOOTER MODULE  ░░░░░░░░░░░░░░░░░░░░░ -->
-<!-- ██████████████████████████████████████████████████████ -->
-
-<img src="footer.svg" width="100%" />
-
-<br/>
-
-<img src="https://komarev.com/ghpvc/?username=Daily-AC&style=for-the-badge&color=1a1a3e&label=VISITORS" />
+<img src="assets/footer.svg" width="100%" alt="connection closed — the agents keep running" />
 
 </div>

@@ -1,0 +1,9 @@
+<svg width="880" height="56" viewBox="0 0 880 56" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="connection closed — the agents keep running">
+  <style>
+    .mono { font-family: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace; }
+    .t { font-size: 12.5px; fill: #58636F; }
+  </style>
+  <line x1="16" y1="28.5" x2="212" y2="28.5" stroke="#1C232E"/>
+  <line x1="668" y1="28.5" x2="864" y2="28.5" stroke="#1C232E"/>
+  <text class="mono t" x="440" y="33" text-anchor="middle"><tspan fill="#F5A63B">$</tspan> exit <tspan fill="#333D49">·</tspan> connection closed — the agents keep running</text>
+</svg>
