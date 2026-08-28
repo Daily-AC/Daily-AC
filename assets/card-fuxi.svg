@@ -2,9 +2,12 @@
   <style>
     .mono { font-family: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace; }
     .name { font-size: 15px; font-weight: 600; fill: #E6EDF3; }
+    .path { font-size: 13.5px; font-weight: 600; fill: #E6EDF3; }
+    .owner { font-size: 13.5px; font-weight: 600; fill: #58636F; }
     .desc { font-size: 12px; fill: #8B949E; }
     .lang { font-size: 11px; fill: #58636F; }
     .topics { font-size: 10.5px; fill: #B98A44; letter-spacing: 0.3px; }
+    .stars { font-size: 10.5px; fill: #B98A44; }
     .idx { font-size: 10.5px; fill: #333D49; }
     .led { animation: led 2.6s ease-in-out 1.35s infinite; }
     @keyframes led { 0%,100% { opacity: 0.25; } 50% { opacity: 1; } }
