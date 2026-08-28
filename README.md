@@ -5,7 +5,7 @@
 
 <sub><samp>$ ls ~/ships --featured</samp></sub>
 
-<a href="https://github.com/Daily-AC/omnireach"><img src="assets/card-omnireach.svg" width="100%" alt="omnireach — search and read the login-walled Chinese internet for AI agents, as an MCP server and a CLI" /></a>
+<a href="https://github.com/Daily-AC/omnireach"><img src="assets/lead-omnireach.svg" width="100%" alt="omnireach — search and read the login-walled Chinese internet for AI agents, as an MCP server and a CLI" /></a>
 <a href="https://github.com/Daily-AC/wanctl"><img src="assets/card-wanctl.svg" width="49%" alt="wanctl — cross-WAN remote device control for humans and AI agents" /></a>
 <a href="https://github.com/Daily-AC/cfx"><img src="assets/card-cfx.svg" width="49%" alt="cfx — Codeforces training CLI for humans and coding agents" /></a>
 <a href="https://github.com/Daily-AC/fuxi"><img src="assets/card-fuxi.svg" width="49%" alt="fuxi — orchestration platform for a personal legion of AI agents" /></a>
