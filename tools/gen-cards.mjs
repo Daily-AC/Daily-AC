@@ -147,9 +147,12 @@ ${contribs
 `;
 
 await refreshStars();
-for (const f of ['contrib-orca', 'contrib-opencli', 'contrib-xiaohongshu-mcp', 'contrib-claude-real-video', 'contrib-chinese-independent-developer'])
+for (const f of ['card-omnireach', 'contrib-orca', 'contrib-opencli', 'contrib-xiaohongshu-mcp', 'contrib-claude-real-video', 'contrib-chinese-independent-developer'])
   rmSync(`${OUT}${f}.svg`, { force: true });
-writeFileSync(`${OUT}card-${lead.slug}.svg`, shipCard(lead, 880));
+// Distinct filename, not card-*.svg: this is the 880-wide artifact, and GitHub's camo
+// proxy caches by URL — reusing the old name serves the stale 432-wide file stretched to
+// double size. Any future change of a card's dimensions needs a new filename too.
+writeFileSync(`${OUT}lead-${lead.slug}.svg`, shipCard(lead, 880));
 for (const c of cards) writeFileSync(`${OUT}card-${c.slug}.svg`, shipCard(c, 432));
 writeFileSync(`${OUT}contributions.svg`, panel());
 console.log(`wrote 1 lead card, ${cards.length} ship cards and a ${contribs.length}-row contributions panel to ${OUT}`);
